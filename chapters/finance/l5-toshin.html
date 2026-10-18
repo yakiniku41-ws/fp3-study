@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>5. 投資信託｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="finance-5" data-title="5. 投資信託" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">投資信託</h1>
+    <div class="lesson-lead">
+      投資信託は「みんなのお金をひとつにまとめ、プロが運用する袋（ファンド）」。
+      初心者に人気ですが試験では<b>コスト（手数料）</b>と<b>運用スタイル・分類</b>が問われます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>3つの手数料は「入口・道中・出口」で払う</h3>
+      <p class="layer__lead">
+        投資信託には<b>買うとき（購入時手数料）</b>、<b>持っている間（運用管理費用＝信託報酬）</b>、
+        <b>売るとき（信託財産留保額）</b>のコストがあります。特に<b>信託報酬は毎日かかり続ける</b>のがポイント。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 110" role="img" aria-label="購入時手数料・信託報酬・信託財産留保額という3つのコストがかかる時点の図">
+          <line x1="30" y1="60" x2="310" y2="60" stroke="var(--border)" stroke-width="2"/>
+          <g font-size="8.5" text-anchor="middle">
+            <circle cx="60" cy="60" r="7" fill="var(--blue)"/><text x="60" y="42" fill="var(--text)" font-weight="700">入口</text><text x="60" y="82" fill="var(--muted)">購入時手数料</text>
+            <rect x="120" y="52" width="100" height="16" rx="4" fill="var(--accent-2)"/><text x="170" y="42" fill="var(--text)" font-weight="700">道中（毎日）</text><text x="170" y="82" fill="var(--muted)">信託報酬</text>
+            <circle cx="290" cy="60" r="7" fill="var(--green)"/><text x="290" y="42" fill="var(--text)" font-weight="700">出口</text><text x="290" y="82" fill="var(--muted)">信託財産留保額</text>
+          </g>
+        </svg>
+        <div class="figure__cap">信託報酬（運用管理費用）は保有中ずっとかかる。ノーロード＝購入時手数料が無料。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>3つのコスト</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>コスト</th><th>いつ・誰に</th></tr></thead>
+          <tbody>
+            <tr><td>購入時手数料</td><td>買うときに販売会社へ。無料のものは<b>ノーロード</b>。</td></tr>
+            <tr><td>運用管理費用（信託報酬）</td><td>保有中、日々差し引かれる。運用会社・販売会社・受託会社で配分。</td></tr>
+            <tr><td>信託財産留保額</td><td>解約（換金）時に差し引かれることがある。かからない商品もある。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>運用スタイル</h3>
+      <ul>
+        <li><b>パッシブ運用（インデックス型）</b>：日経平均やTOPIXなどの指数に連動を目指す。コスト低め。</li>
+        <li><b>アクティブ運用</b>：指数を上回る成績を目指す。調査コストがかかり信託報酬は高めの傾向。</li>
+        <li>アクティブの手法：割安株を選ぶ<b>バリュー</b>、成長株を選ぶ<b>グロース</b>。
+          景気全体から選ぶ<b>トップダウン</b>、個別企業から積み上げる<b>ボトムアップ</b>。</li>
+      </ul>
+
+      <h3>主な種類・用語</h3>
+      <ul>
+        <li><b>公社債投資信託</b>：株式を一切組み入れない（例：MRF・MMF）。<b>ETF（上場投資信託）</b>は取引所で株式のように売買。</li>
+        <li><b>基準価額</b>：投資信託の1口（または1万口）あたりの時価。1日1回算出。</li>
+        <li><b>目論見書</b>（交付目論見書）＝投資判断に必要な重要事項をまとめた書面。<b>運用報告書</b>＝運用実績の報告。</li>
+      </ul>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「入口＝購入時手数料、道中＝信託報酬（毎日）、出口＝信託財産留保額」</b><br>
+      <b>「ノーロード＝買うとき無料」「パッシブ＝指数連動で安い、アクティブ＝上回り狙いで高い」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「信託報酬は購入時に一度だけ支払う」 → ✕（保有中<b>日々</b>かかる）<br>
+      ・「公社債投資信託は株式を組み入れられる」 → ✕（株式は<b>一切組み入れない</b>）<br>
+      ・「パッシブ運用はアクティブ運用より信託報酬が高い傾向」 → ✕（<b>低い</b>傾向）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'finance-5-q1', type: 'ox',
+        q: '投資信託の運用管理費用（信託報酬）は、購入時に一度だけ支払う費用である。',
+        answer: false,
+        explain: '信託報酬は保有期間中、日々、信託財産から差し引かれる費用です。',
+        tags: ['field:finance','unit:finance-5'] },
+      { id: 'finance-5-q2', type: 'choice',
+        q: '日経平均株価やTOPIXなどの指数に連動する運用成果を目指す運用スタイルはどれか。',
+        choices: ['アクティブ運用', 'パッシブ（インデックス）運用', 'グロース運用'],
+        answer: 1,
+        explain: '指数への連動を目指すのはパッシブ（インデックス）運用。一般に信託報酬は低めです。',
+        tags: ['field:finance','unit:finance-5'] },
+      { id: 'finance-5-q3', type: 'ox',
+        q: '公社債投資信託は、株式を一切組み入れずに運用される。',
+        answer: true,
+        explain: '公社債投資信託は株式を組み入れません（MRF・MMFなど）。',
+        tags: ['field:finance','unit:finance-5'] },
+      { id: 'finance-5-q4', type: 'choice',
+        q: '購入時手数料がかからない投資信託を何というか。',
+        choices: ['ノーロード', 'ETF', 'MMF'],
+        answer: 0,
+        explain: '購入時手数料が無料の投資信託をノーロードといいます。',
+        tags: ['field:finance','unit:finance-5'] },
+    ], { unitId: 'finance-5' });
+  </script>
+</body>
+</html>

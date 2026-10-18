@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>5. 財産の評価｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="inherit-5" data-title="5. 財産の評価" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">財産の評価</h1>
+    <div class="lesson-lead">
+      相続税・贈与税を計算するには、財産を「いくら」と見積もるかが必要。
+      とくに<b>宅地の評価</b>と、居住や事業の土地を大きく減額できる<b>小規模宅地等の特例</b>が頻出です。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>宅地は「路線価 × 面積」が基本、貸すと安くなる</h3>
+      <p class="layer__lead">
+        道路に付けられた価格（<b>路線価</b>）に土地の広さをかけるのが基本。
+        人に貸している土地・建物は、自由に使えない分だけ評価が<b>下がります</b>。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 100" role="img" aria-label="自用地から、貸家建付地・貸宅地になるほど評価が下がることを示す図">
+          <g font-size="9" text-anchor="middle" fill="#fff">
+            <rect x="20" y="35" width="90" height="40" rx="6" fill="var(--blue)"/><text x="65" y="52">自用地</text><text x="65" y="66" font-size="8">自分で使う（高い）</text>
+            <rect x="125" y="35" width="90" height="40" rx="6" fill="var(--green)"/><text x="170" y="52">貸家建付地</text><text x="170" y="66" font-size="8">アパート等を建て貸す</text>
+            <rect x="230" y="35" width="90" height="40" rx="6" fill="var(--accent-2)"/><text x="275" y="52">貸宅地</text><text x="275" y="66" font-size="8">土地を貸す（低い）</text>
+          </g>
+          <text x="170" y="90" text-anchor="middle" font-size="8" fill="var(--muted)">← 自由に使えるほど評価は高い　　貸すほど評価は低い →</text>
+        </svg>
+        <div class="figure__cap">利用の自由度が下がるほど、相続税評価額も下がる。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>宅地の評価方法</h3>
+      <ul>
+        <li><b>路線価方式</b>：市街地。路線価（千円単位・㎡あたり）× 各種補正 × 地積。</li>
+        <li><b>倍率方式</b>：路線価のない地域。固定資産税評価額 × 倍率。</li>
+      </ul>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>区分</th><th>評価の考え方</th></tr></thead>
+          <tbody>
+            <tr><td>自用地</td><td>路線価 × 地積（そのままの評価）</td></tr>
+            <tr><td>借地権</td><td>自用地評価額 × 借地権割合</td></tr>
+            <tr><td>貸宅地（底地）</td><td>自用地評価額 ×（1 − 借地権割合）</td></tr>
+            <tr><td>貸家建付地</td><td>自用地評価額 ×（1 − 借地権割合 × 借家権割合 × 賃貸割合）</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>小規模宅地等の特例（大幅な減額）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>区分</th><th>限度面積</th><th>減額割合</th></tr></thead>
+          <tbody>
+            <tr><td>特定居住用宅地等（自宅）</td><td>330㎡</td><td><b>80%減</b></td></tr>
+            <tr><td>特定事業用宅地等（事業）</td><td>400㎡</td><td><b>80%減</b></td></tr>
+            <tr><td>貸付事業用宅地等（賃貸）</td><td>200㎡</td><td><b>50%減</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>その他の財産</h3>
+      <ul>
+        <li><b>上場株式</b>：課税時期の終値と、その月・前月・前々月の各月の終値平均のうち<b>最も低い価額</b>。</li>
+        <li>生命保険契約に関する権利・預貯金なども評価対象。</li>
+      </ul>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「路線価方式＝路線価×地積、倍率方式＝固定資産税評価×倍率」</b><br>
+      <b>「小規模宅地：自宅330㎡・80%、事業400㎡・80%、貸付200㎡・50%」</b><br>
+      <b>「上場株式は 4つの価額のうち"いちばん低い"もの」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「特定居住用宅地等は 400㎡まで80%減」 → ✕（自宅は<b>330㎡</b>。400㎡は特定事業用）<br>
+      ・「上場株式は課税時期の終値だけで評価する」 → ✕（4つの価額のうち<b>最も低い</b>額）<br>
+      ・「貸家建付地は自用地より評価が高い」 → ✕（貸している分<b>低く</b>なる）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'inherit-5-q1', type: 'choice',
+        q: '小規模宅地等の特例における「特定居住用宅地等」の限度面積と減額割合の組合せとして正しいものはどれか。',
+        choices: [
+          '330㎡まで・80%減',
+          '400㎡まで・80%減',
+          '200㎡まで・50%減' ],
+        answer: 0,
+        explain: '特定居住用宅地等は330㎡まで80%減。特定事業用は400㎡・80%、貸付事業用は200㎡・50%です。',
+        tags: ['field:inherit','unit:inherit-5'] },
+      { id: 'inherit-5-q2', type: 'choice',
+        q: '路線価のない地域の宅地を評価する方法はどれか。',
+        choices: ['路線価方式', '倍率方式', '収益還元方式'],
+        answer: 1,
+        explain: '路線価が定められていない地域は、固定資産税評価額に倍率を乗じる倍率方式で評価します。',
+        tags: ['field:inherit','unit:inherit-5'] },
+      { id: 'inherit-5-q3', type: 'ox',
+        q: '上場株式の相続税評価額は、課税時期の終値のほか、当月・前月・前々月の各月の終値の平均額のうち、最も低い価額とすることができる。',
+        answer: true,
+        explain: '4つの価額のうち最も低いものを用いることができます。',
+        tags: ['field:inherit','unit:inherit-5'] },
+      { id: 'inherit-5-q4', type: 'ox',
+        q: '貸家建付地は、同じ土地を自分で使用する自用地よりも相続税評価額が高くなる。',
+        answer: false,
+        explain: '貸家建付地は借家人の権利がある分、自用地より評価額は低くなります。',
+        tags: ['field:inherit','unit:inherit-5'] },
+    ], { unitId: 'inherit-5' });
+  </script>
+</body>
+</html>

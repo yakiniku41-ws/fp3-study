@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>1. 所得税の仕組みと全体の流れ｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="tax-1" data-title="1. 所得税の仕組み" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">所得税の仕組みと全体の流れ</h1>
+    <div class="lesson-lead">
+      タックス分野は「難しそう」と敬遠されがち。でも所得税は<b>「収入 → 所得 → 課税所得 → 税額」</b>という
+      <b>1本の流れ</b>さえつかめば怖くありません。まずこの全体像を体験ツールで俯瞰しましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>税金は「もうけ」を4段階でしぼって計算する</h3>
+      <p class="layer__lead">
+        入ってきた<b>収入</b>から必要経費を引いて<b>所得</b>に、そこから各種控除を引いて<b>課税所得</b>に、
+        最後に税率をかけて<b>税額</b>。ザルで少しずつこして最後に残った部分に課税、というイメージです。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 130" role="img" aria-label="収入から所得、課税所得、税額へと段階的に絞り込む所得税計算の流れの図">
+          <g font-size="9" text-anchor="middle" fill="#fff">
+            <rect x="30" y="20" width="280" height="22" rx="4" fill="var(--blue)"/><text x="170" y="35">① 収入</text>
+            <rect x="60" y="48" width="220" height="22" rx="4" fill="var(--green)"/><text x="170" y="63">② 所得（収入−必要経費）</text>
+            <rect x="90" y="76" width="160" height="22" rx="4" fill="var(--accent-2)"/><text x="170" y="91">③ 課税所得（所得−所得控除）</text>
+            <rect x="120" y="104" width="100" height="22" rx="4" fill="var(--ng)"/><text x="170" y="119">④ 税額</text>
+          </g>
+        </svg>
+        <div class="figure__cap">上から下へ、段階的に対象を絞って最後に税率をかける。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>所得税の基本的な性格</h3>
+      <ul>
+        <li><b>個人</b>の1年間（1/1〜12/31）の所得に課される<b>国税</b>。</li>
+        <li>納税者が自分で計算して申告・納付する<b>申告納税方式</b>。</li>
+        <li>所得が多いほど税率が高くなる<b>超過累進課税</b>。</li>
+      </ul>
+
+      <h3>総合課税と分離課税</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th></th><th>総合課税</th><th>分離課税</th></tr></thead>
+          <tbody>
+            <tr><td>考え方</td><td>各所得を合算して累進税率をかける</td><td>他の所得と分けて独自の税率で課税</td></tr>
+            <tr><td>主な対象</td><td>給与・事業・不動産・一時・雑 など</td><td>退職所得、上場株式の譲渡・配当（申告分離）、土地建物の譲渡 など</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>計算の5ステップ</h3>
+      <div class="steps">
+        <div class="step"><span class="step__no">1</span><span class="step__txt">所得を10種類に分けて、それぞれの<b>所得金額</b>を計算</span></div>
+        <div class="step"><span class="step__no">2</span><span class="step__txt">総合課税の所得を合計（損益通算・繰越控除も）＝<b>課税標準</b></span></div>
+        <div class="step"><span class="step__no">3</span><span class="step__txt"><b>所得控除</b>を差し引いて<b>課税所得金額</b>を求める</span></div>
+        <div class="step"><span class="step__no">4</span><span class="step__txt">税率をかけて<b>所得税額</b>を計算</span></div>
+        <div class="step"><span class="step__no">5</span><span class="step__txt"><b>税額控除</b>を差し引いて<b>納付税額</b>を確定</span></div>
+      </div>
+
+      <h3>体験しよう：所得税の計算フロー</h3>
+      <div id="tfTool"></div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「収入 →（経費）→ 所得 →（所得控除）→ 課税所得 →（税率）→ 税額 →（税額控除）→ 納付」</b><br>
+      <b>「所得控除は"課税所得"を減らす、税額控除は"税額"を直接減らす」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「所得税は前年の所得に対して翌年課税される」 → ✕（所得税は<b>その年</b>の所得。前年課税は住民税）<br>
+      ・「退職所得は総合課税」 → ✕（退職所得は<b>分離課税</b>）<br>
+      ・「所得控除も税額控除も、同じく税額を直接減らす」 → ✕（所得控除は<b>課税所得</b>を減らす）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.incomeTaxFlow(document.getElementById('tfTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'tax-1-q1', type: 'ox',
+        q: '所得税は、その年（1月1日から12月31日まで）の個人の所得に対して課される国税である。',
+        answer: true,
+        explain: '所得税はその年の所得に対する国税です。前年所得に翌年課税されるのは住民税です。',
+        tags: ['field:tax','unit:tax-1'] },
+      { id: 'tax-1-q2', type: 'choice',
+        q: '所得控除と税額控除の違いとして正しいものはどれか。',
+        choices: [
+          '所得控除は税額から直接差し引く',
+          '所得控除は課税所得を、税額控除は税額を減らす',
+          'どちらも課税所得を減らす' ],
+        answer: 1,
+        explain: '所得控除は課税所得金額を減らし、税額控除は算出した税額から直接差し引きます。',
+        tags: ['field:tax','unit:tax-1'] },
+      { id: 'tax-1-q3', type: 'ox',
+        q: '所得税は、所得が多くなるほど高い税率が適用される超過累進課税である。',
+        answer: true,
+        explain: '所得税は5%〜45%の超過累進課税です。',
+        tags: ['field:tax','unit:tax-1'] },
+      { id: 'tax-1-q4', type: 'choice',
+        q: '次のうち、原則として分離課税の対象となる所得はどれか。',
+        choices: ['給与所得', '退職所得', '一時所得'],
+        answer: 1,
+        explain: '退職所得は分離課税です。給与所得・一時所得は総合課税が原則。',
+        tags: ['field:tax','unit:tax-1'] },
+    ], { unitId: 'tax-1' });
+  </script>
+</body>
+</html>

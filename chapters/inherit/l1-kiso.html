@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>1. 相続の基礎｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="inherit-1" data-title="1. 相続の基礎" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">相続の基礎</h1>
+    <div class="lesson-lead">
+      相続でまず決めるのは<b>「誰が相続人になるか」</b>。配偶者は常に相続人で、血族には<b>順位</b>があります。
+      さらに、借金が多いときの<b>相続放棄</b>や、<b>遺言</b>の種類も押さえましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>配偶者は「always」、血族は「早い者順」</h3>
+      <p class="layer__lead">
+        配偶者がいれば必ず相続人。血族は<b>第1順位 子 → 第2順位 直系尊属（親）→ 第3順位 兄弟姉妹</b>の順で、
+        上の順位がいれば下の順位は相続人になりません。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 120" role="img" aria-label="配偶者は常に相続人、血族は子・直系尊属・兄弟姉妹の順位で相続人になる図">
+          <g font-size="9" text-anchor="middle" fill="#fff">
+            <rect x="115" y="8" width="110" height="24" rx="6" fill="var(--ng)"/><text x="170" y="24">配偶者：常に相続人</text>
+            <rect x="20" y="50" width="90" height="40" rx="6" fill="var(--blue)"/><text x="65" y="68" font-weight="700">第1順位</text><text x="65" y="82">子</text>
+            <rect x="125" y="50" width="90" height="40" rx="6" fill="var(--green)"/><text x="170" y="68" font-weight="700">第2順位</text><text x="170" y="82">直系尊属</text>
+            <rect x="230" y="50" width="90" height="40" rx="6" fill="var(--accent-2)"/><text x="275" y="68" font-weight="700">第3順位</text><text x="275" y="82">兄弟姉妹</text>
+          </g>
+          <text x="170" y="108" text-anchor="middle" font-size="8" fill="var(--muted)">上の順位がいれば、下の順位は相続人にならない</text>
+        </svg>
+        <div class="figure__cap">配偶者＋（第1がいれば第1、いなければ第2、それもいなければ第3）。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>相続人の範囲と代襲相続</h3>
+      <ul>
+        <li>配偶者は常に相続人。血族は第1順位「子」、第2順位「直系尊属」、第3順位「兄弟姉妹」。</li>
+        <li><b>代襲相続</b>：相続人となるはずの子が先に亡くなっている場合、その子（孫）が代わって相続する。
+          兄弟姉妹の代襲は<b>その子（甥・姪）まで</b>（再代襲なし）。</li>
+        <li>養子・胎児・非嫡出子（認知された子）も相続人になり得る。</li>
+      </ul>
+
+      <h3>相続の承認・放棄</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>方法</th><th>内容・期限</th></tr></thead>
+          <tbody>
+            <tr><td>単純承認</td><td>プラスもマイナスもすべて引き継ぐ。何もしないと単純承認になる。</td></tr>
+            <tr><td>限定承認</td><td>プラスの財産の範囲内で債務を引き継ぐ。<b>相続人全員で</b>、<b>3か月以内</b>に家庭裁判所へ。</td></tr>
+            <tr><td>相続放棄</td><td>一切引き継がない。<b>各人が単独で</b>、<b>3か月以内</b>に家庭裁判所へ。放棄すると初めから相続人でなかったとみなされ、代襲もされない。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>遺言の主な種類</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th></th><th>自筆証書遺言</th><th>公正証書遺言</th></tr></thead>
+          <tbody>
+            <tr><td>作成</td><td>本人が自書（財産目録はPC可）</td><td>公証人が作成</td></tr>
+            <tr><td>証人</td><td>不要</td><td><b>2人以上</b></td></tr>
+            <tr><td>家庭裁判所の検認</td><td>原則<b>必要</b>（法務局保管制度を使えば不要）</td><td><b>不要</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「配偶者は常に相続人、血族は 子→親→兄弟姉妹」</b><br>
+      <b>「限定承認は全員で、相続放棄は各自で、どちらも3か月以内」</b><br>
+      <b>「公正証書遺言は 証人2人・検認不要」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「限定承認は相続人が単独でできる」 → ✕（<b>相続人全員</b>で行う）<br>
+      ・「相続放棄した人の子が代襲相続する」 → ✕（放棄は<b>代襲されない</b>）<br>
+      ・「公正証書遺言も家庭裁判所の検認が必要」 → ✕（公正証書遺言は<b>検認不要</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'inherit-1-q1', type: 'choice',
+        q: '民法上の相続人の順位について、第2順位に当たるのはどれか。',
+        choices: ['子', '直系尊属（父母など）', '兄弟姉妹'],
+        answer: 1,
+        explain: '第1順位が子、第2順位が直系尊属、第3順位が兄弟姉妹です。配偶者は常に相続人。',
+        tags: ['field:inherit','unit:inherit-1'] },
+      { id: 'inherit-1-q2', type: 'choice',
+        q: '相続の限定承認・放棄は、原則として自己のために相続の開始があったことを知った時から何か月以内に行うか。',
+        choices: ['3か月以内', '4か月以内', '10か月以内'],
+        answer: 0,
+        explain: '限定承認・相続放棄は原則3か月以内。準確定申告は4か月、相続税申告は10か月です。',
+        tags: ['field:inherit','unit:inherit-1'] },
+      { id: 'inherit-1-q3', type: 'ox',
+        q: '相続を放棄した者の子は、その放棄した者を代襲して相続人となる。',
+        answer: false,
+        explain: '相続放棄をすると初めから相続人でなかったものとみなされ、代襲相続は生じません。',
+        tags: ['field:inherit','unit:inherit-1'] },
+      { id: 'inherit-1-q4', type: 'ox',
+        q: '公正証書遺言は、家庭裁判所による検認の手続きが不要である。',
+        answer: true,
+        explain: '公正証書遺言は検認不要です。自筆証書遺言は原則検認が必要（法務局保管なら不要）。',
+        tags: ['field:inherit','unit:inherit-1'] },
+    ], { unitId: 'inherit-1' });
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="FP技能検定3級（日本FP協会・資産設計提案業務）に、まだこの世にないレベルの分かりやすさで合格するための学習サイト。">
+  <title>FP3級 合格ナビ｜日本FP協会・資産設計提案業務</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- data-nav / data-title は共通ヘッダー・ナビの状態に使う -->
+</head>
+<body data-nav="home">
+
+  <!-- 共通ヘッダー（app.js が中身を注入） -->
+  <div id="appHeader"></div>
+
+  <main class="wrap" id="home">
+
+    <section class="hero">
+      <h1>FP3級 合格ナビ 🎯</h1>
+      <p>日本FP協会・実技は「資産設計提案業務」。スキマ時間で、直感 → 理解 → 得点の順にサクッと。</p>
+    </section>
+
+    <!-- 続きから（前回の位置がある時だけ表示） -->
+    <div id="resume"></div>
+
+    <!-- 学習ストリーク -->
+    <div id="streak"></div>
+
+    <!-- 今日やるべき1単元（選択肢を1つに絞る） -->
+    <h2 class="section-title">📌 今日はこれだけ</h2>
+    <div id="nextUnit"></div>
+
+    <!-- 全体の習熟度 -->
+    <div id="overall"></div>
+
+    <!-- 合格逆算プラン -->
+    <div id="examPlan"></div>
+
+    <!-- ロードマップ（すごろく/スキルツリー風） -->
+    <h2 class="section-title">🗺️ 学習ロードマップ</h2>
+    <div id="roadmap"></div>
+
+    <!-- バッジ -->
+    <h2 class="section-title">🏅 バッジ・実績</h2>
+    <div id="badges"></div>
+
+    <!-- クイックリンク -->
+    <h2 class="section-title">⚡ クイックスタート</h2>
+    <div class="card">
+      <div class="field-grid">
+        <a class="btn btn--outline" href="chapters/index.html">📚 分野から学ぶ</a>
+        <a class="btn btn--outline" href="exam/index.html">📝 模試に挑戦</a>
+        <a class="btn btn--outline" href="jitsugi/index.html">📄 実技（資産設計提案業務）</a>
+        <a class="btn btn--outline" href="review.html">🔁 復習デッキ</a>
+      </div>
+      <p class="muted small" style="margin:12px 0 0">
+        本サイトはフェーズ1（骨格）です。分野①ライフプランニング以降の単元は順次追加されます。
+      </p>
+    </div>
+
+    <p class="muted small center" style="margin:22px 0 8px">
+      学習データはこの端末のブラウザ（localStorage）にのみ保存されます。
+    </p>
+
+  </main>
+
+  <!-- 下部ナビ（app.js が中身を注入） -->
+  <nav id="appNav"></nav>
+
+  <!-- スクリプト（順序重要: データ → 共通 → クイズ） -->
+  <script src="js/data/curriculum.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+</body>
+</html>

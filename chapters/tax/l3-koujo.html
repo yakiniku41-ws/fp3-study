@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>3. 損益通算と所得控除｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="tax-3" data-title="3. 損益通算と所得控除" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">損益通算と所得控除</h1>
+    <div class="lesson-lead">
+      赤字が出た所得を他の黒字と相殺できるのが<b>損益通算</b>。そして課税所得を減らす<b>所得控除</b>。
+      「どの赤字が通算できるか」「どんな控除があるか」——狙われるポイントを整理します。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>損益通算できる赤字は「富士山上（ふ・じ・さん・じょう）」</h3>
+      <p class="layer__lead">
+        赤字を他の所得と相殺できるのは、原則<b>不動産・事業・山林・譲渡</b>の4つの所得だけ。
+        頭文字で<b>「ふ（不動産）じ（事業）さん（山林）じょう（譲渡）」</b>と覚えます。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 110" role="img" aria-label="損益通算できるのは不動産・事業・山林・譲渡の4所得であることを示す図">
+          <g font-size="10" text-anchor="middle" fill="#fff">
+            <rect x="15" y="35" width="70" height="40" rx="8" fill="var(--green)"/><text x="50" y="52">不動産</text><text x="50" y="67" font-size="8">ふ</text>
+            <rect x="95" y="35" width="70" height="40" rx="8" fill="var(--green)"/><text x="130" y="52">事業</text><text x="130" y="67" font-size="8">じ</text>
+            <rect x="175" y="35" width="70" height="40" rx="8" fill="var(--green)"/><text x="210" y="52">山林</text><text x="210" y="67" font-size="8">さん</text>
+            <rect x="255" y="35" width="70" height="40" rx="8" fill="var(--green)"/><text x="290" y="52">譲渡</text><text x="290" y="67" font-size="8">じょう</text>
+          </g>
+          <text x="170" y="22" text-anchor="middle" font-size="10" font-weight="700" fill="var(--text)">損益通算できる4つの所得</text>
+        </svg>
+        <div class="figure__cap">この4つ以外（一時・雑など）の赤字は、原則ほかの所得と通算できない。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>損益通算の注意点</h3>
+      <ul>
+        <li>通算できるのは原則<b>不動産・事業・山林・譲渡</b>の損失。</li>
+        <li>ただし例外あり：不動産所得の損失のうち<b>土地取得のための借入金利子</b>部分は通算できない。</li>
+        <li>生活に通常必要でない資産（別荘・ゴルフ会員権など）の譲渡損失は通算できない。</li>
+        <li>株式等の譲渡損失は原則ほかの所得と通算不可（申告分離内で配当等とは可）。</li>
+      </ul>
+
+      <h3>主な所得控除（課税所得を減らす）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>控除</th><th>ポイント</th></tr></thead>
+          <tbody>
+            <tr><td>基礎控除</td><td>合計所得2,400万円以下で<b>48万円</b>（所得が増えると逓減）<span class="badge badge--warn">改正注意</span></td></tr>
+            <tr><td>配偶者控除</td><td>配偶者の合計所得<b>48万円以下</b>など。納税者本人の所得が1,000万円超だと対象外。</td></tr>
+            <tr><td>扶養控除</td><td>扶養親族の合計所得48万円以下。一般38万円、特定扶養（19〜22歳）63万円など。</td></tr>
+            <tr><td>社会保険料控除</td><td>支払った社会保険料の<b>全額</b>。</td></tr>
+            <tr><td>生命保険料控除</td><td>新制度は3区分で所得税各最大4万円（合計最大12万円）。</td></tr>
+            <tr><td>医療費控除</td><td>（支払医療費 − 保険金等）−<b>10万円</b>（総所得200万円未満は総所得の5%）。上限200万円。</td></tr>
+            <tr><td>寄附金控除</td><td>ふるさと納税など。原則、確定申告が必要（ワンストップ特例の例外あり）。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「損益通算できるのは ふ・じ・さん・じょう（不動産・事業・山林・譲渡）」</b><br>
+      <b>「配偶者控除は配偶者の所得48万円以下・本人の所得1,000万円以下」</b><br>
+      <b>「医療費控除は"10万円"を超えた分（総所得200万未満は5%）」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「一時所得の損失は給与所得と損益通算できる」 → ✕（一時・雑の損失は<b>通算不可</b>）<br>
+      ・「医療費控除は支払った医療費の全額」 → ✕（原則<b>10万円を超えた部分</b>）<br>
+      ・「本人の合計所得が1,000万円を超えても配偶者控除が受けられる」 → ✕（<b>対象外</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'tax-3-q1', type: 'choice',
+        q: '次の所得の損失のうち、原則として損益通算ができないものはどれか。',
+        choices: ['不動産所得の損失', '事業所得の損失', '雑所得の損失'],
+        answer: 2,
+        explain: '損益通算できるのは不動産・事業・山林・譲渡の損失。雑所得の損失は通算できません。',
+        tags: ['field:tax','unit:tax-3'] },
+      { id: 'tax-3-q2', type: 'ox',
+        q: '控除対象配偶者となるには、配偶者の合計所得金額が48万円以下であることなどが必要である。',
+        answer: true,
+        explain: '配偶者の合計所得48万円以下（給与のみなら年収103万円以下）などが要件です。',
+        tags: ['field:tax','unit:tax-3'] },
+      { id: 'tax-3-q3', type: 'choice',
+        q: '医療費控除の控除額（総所得金額等が200万円以上の場合）の計算で、支払った医療費（保険金等を控除後）から差し引く金額はどれか。',
+        choices: ['5万円', '10万円', '20万円'],
+        answer: 1,
+        explain: '総所得200万円以上なら10万円を差し引きます（200万円未満は総所得の5%）。',
+        tags: ['field:tax','unit:tax-3'] },
+      { id: 'tax-3-q4', type: 'ox',
+        q: '納税者が支払った社会保険料は、その全額が社会保険料控除の対象となる。',
+        answer: true,
+        explain: '社会保険料控除は支払った全額が対象です。',
+        tags: ['field:tax','unit:tax-3'] },
+    ], { unitId: 'tax-3' });
+  </script>
+</body>
+</html>

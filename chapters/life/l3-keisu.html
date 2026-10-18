@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>3. 6つの係数｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="life-3" data-title="3. 6つの係数" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">6つの係数 — お金を過去・未来へ送る切符</h1>
+    <div class="lesson-lead">
+      「10年後に300万円ほしい。毎年いくら積み立てればいい？」——こういう問いに一発で答える魔法の数字が
+      <b>6つの係数</b>です。名前が似ていて混乱しがちですが、<b>「切符」の比喩</b>で一気に整理できます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>お金のタイムマシンに乗る「6枚の切符」</h3>
+      <p class="layer__lead">
+        お金を<b>未来へ送る</b>か<b>今へ戻す</b>か、そして<b>一括で動かす</b>か<b>毎年コツコツ</b>かで、使う切符（係数）が決まります。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 190" role="img" aria-label="一括か毎年か、未来へか現在へかで6つの係数を分類した図">
+          <text x="170" y="16" text-anchor="middle" font-size="11" font-weight="800" fill="var(--text)">現在 ⇄ 未来／一括 ⇄ 毎年</text>
+          <!-- 一括 行 -->
+          <rect x="10" y="30" width="150" height="66" rx="8" fill="color-mix(in srgb, var(--blue) 10%, transparent)"/>
+          <text x="85" y="48" text-anchor="middle" font-size="10" font-weight="700" fill="var(--blue-700)">一括のお金を動かす</text>
+          <text x="85" y="68" text-anchor="middle" font-size="9" fill="var(--text)">今→未来：終価係数</text>
+          <text x="85" y="84" text-anchor="middle" font-size="9" fill="var(--text)">未来→今：現価係数</text>
+          <!-- 毎年 行 -->
+          <rect x="10" y="104" width="320" height="78" rx="8" fill="color-mix(in srgb, var(--green) 10%, transparent)"/>
+          <text x="170" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="var(--green)">毎年コツコツが絡む</text>
+          <g font-size="8.5" fill="var(--text)" text-anchor="middle">
+            <text x="90" y="140">積立→将来合計</text><text x="90" y="152" font-weight="700">年金終価係数</text>
+            <text x="250" y="140">目標→毎年積立</text><text x="250" y="152" font-weight="700">減債基金係数</text>
+            <text x="90" y="168">元手→毎年受取</text><text x="90" y="180" font-weight="700">資本回収係数</text>
+            <text x="250" y="168">毎年受取→今必要額</text><text x="250" y="180" font-weight="700">年金現価係数</text>
+          </g>
+          <line x1="170" y1="128" x2="170" y2="182" stroke="var(--border)"/>
+        </svg>
+        <div class="figure__cap">「一括か毎年か」「未来か現在か」の2軸で6係数を仕分けする。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+      <h3>6つの係数 早見表</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>係数</th><th>何を求める？</th><th>掛ける相手</th></tr></thead>
+          <tbody>
+            <tr><td><b>終価係数</b></td><td>一時金を運用したら将来いくら</td><td>今の一時金</td></tr>
+            <tr><td><b>現価係数</b></td><td>将来の目標額に必要な今の一時金</td><td>将来の目標額</td></tr>
+            <tr><td><b>年金終価係数</b></td><td>毎年積み立てたら将来いくら貯まる</td><td>毎年の積立額</td></tr>
+            <tr><td><b>減債基金係数</b></td><td>将来の目標額のために毎年いくら積む</td><td>将来の目標額</td></tr>
+            <tr><td><b>資本回収係数</b></td><td>今ある元手を取り崩すと毎年いくら受取れる（＝ローンの毎年返済額）</td><td>今の元手</td></tr>
+            <tr><td><b>年金現価係数</b></td><td>毎年受け取るために今いくら必要</td><td>毎年の受取額</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>ペアで覚えると速い（互いに逆数）</h3>
+      <ul>
+        <li><b>終価</b> ⇔ <b>現価</b>（増やす／割り引く）</li>
+        <li><b>年金終価</b> ⇔ <b>減債基金</b>（積立の合計／必要な積立額）</li>
+        <li><b>資本回収</b> ⇔ <b>年金現価</b>（元手からの受取／受取に必要な元手）</li>
+      </ul>
+
+      <h3>触って確かめる：6つの係数シミュレーター</h3>
+      <div id="scTool"></div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック（選び方の3問）</div>
+      ① 動かすお金は「一括」？「毎年」？<br>
+      ② 求めたいのは「将来の額」？「今の額」？「毎年の額」？<br>
+      ③ 「毎年いくら積む？」＝<b>減債基金</b>、「毎年いくら受け取れる？（元手あり）」＝<b>資本回収</b>。
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・<b>減債基金係数</b>と<b>資本回収係数</b>の取り違えが最頻出。<br>
+      　→「これから貯める（目標→毎年積立）」＝減債基金／「もうある元手を取り崩す（元手→毎年受取）」＝資本回収。<br>
+      ・住宅ローンの<b>毎年の返済額</b>を求めるのは<b>資本回収係数</b>（借入額＝元手とみなす）。
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.sixCoefficients(document.getElementById('scTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'life-3-q1', type: 'choice',
+        q: '現在の100万円を年利で運用した場合の、10年後の元利合計を求めるのに使う係数はどれか。',
+        choices: ['終価係数', '現価係数', '年金現価係数'],
+        answer: 0,
+        explain: '一時金を将来へ増やす → 終価係数。',
+        tags: ['field:life','unit:life-3'] },
+      { id: 'life-3-q2', type: 'choice',
+        q: '10年後に300万円を用意するために、毎年いくら積み立てればよいかを求める係数はどれか。',
+        choices: ['年金終価係数', '減債基金係数', '資本回収係数'],
+        answer: 1,
+        explain: '将来の目標額から毎年の積立額を求める → 減債基金係数。',
+        tags: ['field:life','unit:life-3'] },
+      { id: 'life-3-q3', type: 'choice',
+        q: '毎年60万円を10年間積み立てたとき、10年後にいくら貯まるかを求める係数はどれか。',
+        choices: ['年金終価係数', '減債基金係数', '終価係数'],
+        answer: 0,
+        explain: '毎年の積立の将来合計 → 年金終価係数。',
+        tags: ['field:life','unit:life-3'] },
+      { id: 'life-3-q4', type: 'choice',
+        q: '手元の1,000万円を運用しながら20年間で取り崩すとき、毎年受け取れる額を求める係数はどれか。（住宅ローンの毎年返済額を求めるのと同じ）',
+        choices: ['年金現価係数', '資本回収係数', '減債基金係数'],
+        answer: 1,
+        explain: '今ある元手から毎年の受取額（＝ローン返済額）を求める → 資本回収係数。',
+        tags: ['field:life','unit:life-3'] },
+      { id: 'life-3-q5', type: 'ox',
+        q: '終価係数と現価係数は、互いに逆数の関係にある。',
+        answer: true,
+        explain: '将来へ増やす終価係数と、今へ割り引く現価係数は逆数の関係です。',
+        tags: ['field:life','unit:life-3'] },
+    ], { unitId: 'life-3' });
+  </script>
+</body>
+</html>

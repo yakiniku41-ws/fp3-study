@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>3. 債券投資と利回り｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="finance-3" data-title="3. 債券投資" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">債券投資と利回り</h1>
+    <div class="lesson-lead">
+      債券は「国や会社にお金を貸す」商品。試験の主役は<b>「金利と債券価格はシーソー（逆の動き）」</b>と、
+      <b>利回りの計算</b>です。電卓ツールで公式を体に入れましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>金利と債券価格は「シーソー」</h3>
+      <p class="layer__lead">
+        世の中の金利が上がると、利率の低い既発の債券は魅力が下がり<b>価格は下落</b>。
+        逆に金利が下がると既発債は魅力UPで<b>価格は上昇</b>。この逆相関が最頻出です。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 120" role="img" aria-label="金利が上がると債券価格が下がり、金利が下がると債券価格が上がるシーソーの図">
+          <line x1="60" y1="80" x2="280" y2="45" stroke="var(--text)" stroke-width="3"/>
+          <polygon points="170,70 160,100 180,100" fill="var(--muted)"/>
+          <g font-size="10" text-anchor="middle">
+            <text x="60" y="70" fill="var(--accent-2)" font-weight="700">金利↑</text>
+            <text x="280" y="38" fill="var(--blue)" font-weight="700">価格↓</text>
+          </g>
+          <g font-size="8" fill="var(--muted)" text-anchor="middle">
+            <text x="60" y="112">金利が上がると…</text>
+            <text x="280" y="112">…既発債の価格は下がる</text>
+          </g>
+        </svg>
+        <div class="figure__cap">金利↑ → 債券価格↓／金利↓ → 債券価格↑。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>債券の基本用語</h3>
+      <ul>
+        <li><b>額面</b>：償還時に戻る金額（通常100円単位で表示）。</li>
+        <li><b>表面利率（クーポンレート）</b>：額面に対して毎年支払われる利息の割合。</li>
+        <li><b>償還期限</b>：満期。ここで額面が戻る。</li>
+      </ul>
+
+      <h3>4つの利回り</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>利回り</th><th>いつ買って・いつ売る？</th></tr></thead>
+          <tbody>
+            <tr><td>応募者利回り</td><td>新規発行で買い、償還まで保有</td></tr>
+            <tr><td>最終利回り</td><td>すでに発行された債券を買い、償還まで保有</td></tr>
+            <tr><td>所有期間利回り</td><td>買って、償還前に途中で売却</td></tr>
+            <tr><td>直接利回り</td><td>購入価格に対する毎年の利息の割合</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--point">
+        <div class="callout__title">利回り（単利）の共通式</div>
+        利回り(%) ＝（表面利率 ＋（売却・償還価格 − 購入価格）÷ 所有年数）÷ 購入価格 ×100
+      </div>
+
+      <h3>触って確かめる：債券利回り電卓</h3>
+      <div id="byTool"></div>
+
+      <h3>債券のリスクと格付け</h3>
+      <ul>
+        <li><b>信用リスク（デフォルトリスク）</b>：発行体が利払い・償還をできなくなるリスク。</li>
+        <li><b>格付け</b>：<b>BBB（トリプルB）以上が投資適格</b>、BB以下が投機的（投資不適格）。格付けが低いほど利回りは高くなる傾向。</li>
+        <li><b>価格変動（金利）リスク</b>：市場金利の変動で価格が動く。</li>
+      </ul>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「金利と価格はシーソー（逆）」</b><br>
+      <b>「利回り＝（利息 ＋ 値上がり/値下がり ÷ 年数）÷ 買った値段」</b><br>
+      <b>「投資適格は BBB以上」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「市場金利が上昇すると債券価格も上昇する」 → ✕（金利↑なら価格<b>↓</b>）<br>
+      ・「格付けが高い（安全な）債券ほど利回りは高い」 → ✕（安全なほど利回りは<b>低い</b>）<br>
+      ・「BB格は投資適格」 → ✕（投資適格は<b>BBB以上</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.bondYield(document.getElementById('byTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'finance-3-q1', type: 'ox',
+        q: '一般に、市場金利が上昇すると、既に発行されている債券の価格は下落する。',
+        answer: true,
+        explain: '金利と債券価格はシーソーの関係（逆相関）です。',
+        tags: ['field:finance','unit:finance-3'] },
+      { id: 'finance-3-q2', type: 'choice',
+        q: '債券の信用格付けについて、一般に「投資適格」とされる下限はどれか。',
+        choices: ['BBB（トリプルB）格', 'BB（ダブルB）格', 'C格'],
+        answer: 0,
+        explain: 'BBB格以上が投資適格、BB格以下は投機的（投資不適格）とされます。',
+        tags: ['field:finance','unit:finance-3'] },
+      { id: 'finance-3-q3', type: 'ox',
+        q: '一般に、他の条件が同じであれば、信用格付けが低い債券ほど利回りは高くなる傾向がある。',
+        answer: true,
+        explain: 'リスクが高い（格付けが低い）ほど、その分高い利回りが求められます。',
+        tags: ['field:finance','unit:finance-3'] },
+      { id: 'finance-3-q4', type: 'choice',
+        q: 'すでに発行されている債券を購入し、償還まで保有した場合の利回りを何というか。',
+        choices: ['応募者利回り', '最終利回り', '直接利回り'],
+        answer: 1,
+        explain: '既発債を買って償還まで保有＝最終利回り。新発債で償還まで＝応募者利回り。',
+        tags: ['field:finance','unit:finance-3'] },
+    ], { unitId: 'finance-3' });
+  </script>
+</body>
+</html>

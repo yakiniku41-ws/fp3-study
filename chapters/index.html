@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>分野から学ぶ｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav="learn" data-title="分野から学ぶ" data-back="index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>📚 6分野から学ぶ</h1>
+      <p>各分野は5〜8単元。1単元は10〜15分で1周できる分量です。気になる分野の見出しから始めましょう。</p>
+    </section>
+
+    <div id="fieldList"></div>
+
+    <p class="muted small center" style="margin:22px 0 8px">
+      🔒 は準備中の単元です（フェーズ2以降で順次公開）。
+    </p>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../js/data/curriculum.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script>
+    /* 分野ごとに、進捗バーと単元リストを描画する */
+    (function () {
+      var host = document.getElementById('fieldList');
+      if (!host || !window.CURRICULUM) return;
+      var Store = window.FP3.Store;
+      var MASTERY = window.FP3.MASTERY;
+
+      var html = '';
+      window.CURRICULUM.FIELDS.forEach(function (f) {
+        var units = window.CURRICULUM.unitsOf(f.key);
+        var pct = Math.round(Store.fieldProgress(f.key) * 100);
+        html +=
+          '<section class="card" id="' + f.key + '" style="--accent:' + f.color + ';border-left:5px solid ' + f.color + '">' +
+            '<div class="row-between">' +
+              '<h3>' + f.emoji + ' ' + f.no + '. ' + f.title + '</h3>' +
+              '<b class="pct" style="color:' + f.color + '">' + pct + '%</b>' +
+            '</div>' +
+            '<p class="muted small">' + f.description + '</p>' +
+            '<div class="meter"><div class="meter__fill" style="width:' + pct + '%"></div></div>' +
+            '<div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">' +
+              units.map(function (u) {
+                var lvl = Store.getMastery(u.id);
+                var locked = !u.href;
+                var badge = '<span class="badge ' +
+                  (lvl === 'mastered' ? 'badge--info' : 'badge--warn') +
+                  '">' + MASTERY[lvl].label + '</span>';
+                var inner =
+                  '<span style="flex:1"><b>' + u.no + '.</b> ' + u.title +
+                    '<br><span class="muted small">⏱約' + u.minutes + '分・' + (u.summary || '') + '</span></span>' +
+                  (locked ? '<span class="muted small">🔒 準備中</span>' : badge);
+                if (locked) {
+                  return '<div class="field-card" style="display:flex;gap:10px;align-items:flex-start;opacity:.7;border-left-color:' + f.color + '">' + inner + '</div>';
+                }
+                return '<a class="field-card" style="display:flex;gap:10px;align-items:flex-start;border-left-color:' + f.color + '" href="../' + u.href + '">' + inner + '</a>';
+              }).join('') +
+            '</div>' +
+          '</section>';
+      });
+      host.innerHTML = html;
+
+      /* #アンカーで来たらスクロール */
+      if (location.hash) {
+        var t = document.getElementById(location.hash.slice(1));
+        if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    })();
+  </script>
+</body>
+</html>

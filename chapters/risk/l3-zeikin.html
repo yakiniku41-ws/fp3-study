@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>3. 生命保険と税金｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="risk-3" data-title="3. 生命保険と税金" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">生命保険と税金</h1>
+    <div class="lesson-lead">
+      保険は「払うとき」に<b>生命保険料控除</b>で節税でき、「受け取るとき」は
+      <b>契約者・被保険者・受取人の3人の関係</b>で税金の種類が変わります。
+      ここは毎回出る超頻出テーマ。ツールで手を動かして体に入れましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>受取時の税金は「お金を出した人・受け取る人」で決まる</h3>
+      <p class="layer__lead">
+        死亡保険金は、<b>①自分にかけて自分が亡くなる（契約者＝被保険者）→ 相続税</b>、
+        <b>②自分で払って自分が受け取る（契約者＝受取人）→ 所得税</b>、
+        <b>③全員バラバラ → 贈与税</b>。この3パターンだけです。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 150" role="img" aria-label="死亡保険金の課税は契約者・被保険者・受取人の関係で相続税・所得税・贈与税に分かれる図">
+          <g font-size="8.5" fill="var(--text)" text-anchor="middle">
+            <rect x="8" y="24" width="100" height="96" rx="8" fill="color-mix(in srgb, var(--green) 12%, transparent)"/>
+            <text x="58" y="42" font-weight="700" font-size="10">相続税</text>
+            <text x="58" y="62">契約者＝被保険者</text><text x="58" y="76" fill="var(--muted)">夫が自分にかけ</text><text x="58" y="88" fill="var(--muted)">受取人は妻</text>
+
+            <rect x="120" y="24" width="100" height="96" rx="8" fill="color-mix(in srgb, var(--blue) 12%, transparent)"/>
+            <text x="170" y="42" font-weight="700" font-size="10">所得税</text>
+            <text x="170" y="62">契約者＝受取人</text><text x="170" y="76" fill="var(--muted)">妻が払い妻が</text><text x="170" y="88" fill="var(--muted)">受け取る</text>
+
+            <rect x="232" y="24" width="100" height="96" rx="8" fill="var(--ng-bg)"/>
+            <text x="282" y="42" font-weight="700" font-size="10">贈与税</text>
+            <text x="282" y="62">3人とも別々</text><text x="282" y="76" fill="var(--muted)">夫が払い被保険</text><text x="282" y="88" fill="var(--muted)">者も夫・受取子</text>
+          </g>
+        </svg>
+        <div class="figure__cap">死亡保険金の3パターン。契約者＝保険料を払う人がカギ。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>払うとき：生命保険料控除</h3>
+      <ul>
+        <li>2012年以降の契約は<b>「一般の生命保険料」「介護医療保険料」「個人年金保険料」</b>の3区分。<span class="badge badge--warn">改正注意</span></li>
+        <li>各区分ごとに所得税で最大<b>4万円</b>（合計で最大12万円）、住民税で各最大2.8万円（合計最大7万円）。</li>
+        <li>個人年金保険料控除を使うには、税制適格特約が付いているなどの要件を満たす必要がある。</li>
+      </ul>
+
+      <h3>受け取るとき：保険金の課税関係（超重要）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>保険金</th><th>関係</th><th>税金</th></tr></thead>
+          <tbody>
+            <tr><td rowspan="3">死亡保険金</td><td>契約者＝被保険者（受取人は別）</td><td><b>相続税</b>（みなし相続財産）</td></tr>
+            <tr><td>契約者＝受取人（被保険者は別）</td><td><b>所得税</b>（一時所得）</td></tr>
+            <tr><td>契約者・被保険者・受取人が全員別</td><td><b>贈与税</b></td></tr>
+            <tr><td rowspan="2">満期保険金</td><td>契約者＝受取人</td><td><b>所得税</b>（一時所得）</td></tr>
+            <tr><td>契約者≠受取人</td><td><b>贈与税</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout callout--point">
+        <div class="callout__title">相続税の死亡保険金 非課税枠</div>
+        受取人が相続人の死亡保険金には <b>500万円 ×法定相続人の数</b> の非課税枠があります（相続分野で詳説）。
+      </div>
+
+      <h3>触って確かめる：保険金の税金 判定ツール</h3>
+      <div id="itTool"></div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      死亡保険金：<b>「自分にかけて自分が死ぬ＝相続／自分で払って自分がもらう＝所得／全員バラバラ＝贈与」</b><br>
+      満期保険金：<b>「払った人＝もらう人なら所得税、違えば贈与税」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「契約者と被保険者が同じ人の死亡保険金は所得税」 → ✕（<b>相続税</b>）<br>
+      ・「契約者と受取人が同じ満期保険金は贈与税」 → ✕（<b>所得税・一時所得</b>）<br>
+      ・生命保険料控除は「契約日」で新旧制度が分かれる（2012年〜は新制度3区分）。
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.insuranceTaxJudge(document.getElementById('itTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'risk-3-q1', type: 'choice',
+        q: '契約者（保険料負担者）と被保険者が同一人物（夫）で、受取人が妻である生命保険の死亡保険金にかかる税金はどれか。',
+        choices: ['相続税', '所得税', '贈与税'],
+        answer: 0,
+        explain: '契約者＝被保険者の死亡保険金は、みなし相続財産として相続税の対象です。',
+        tags: ['field:risk','unit:risk-3'] },
+      { id: 'risk-3-q2', type: 'choice',
+        q: '契約者・受取人が妻、被保険者が夫である生命保険の死亡保険金にかかる税金はどれか。',
+        choices: ['相続税', '所得税（一時所得）', '贈与税'],
+        answer: 1,
+        explain: '契約者＝受取人（保険料を払った人が受け取る）なので、所得税（一時所得）です。',
+        tags: ['field:risk','unit:risk-3'] },
+      { id: 'risk-3-q3', type: 'choice',
+        q: '契約者が夫、被保険者が妻、受取人が子である生命保険の死亡保険金にかかる税金はどれか。',
+        choices: ['相続税', '所得税', '贈与税'],
+        answer: 2,
+        explain: '契約者・被保険者・受取人が全員異なる場合は贈与税の対象です。',
+        tags: ['field:risk','unit:risk-3'] },
+      { id: 'risk-3-q4', type: 'ox',
+        q: '契約者と受取人が同一人物である満期保険金は、所得税（一時所得）の課税対象となる。',
+        answer: true,
+        explain: '満期保険金は「契約者＝受取人」なら所得税、異なれば贈与税です。',
+        tags: ['field:risk','unit:risk-3'] },
+      { id: 'risk-3-q5', type: 'ox',
+        q: '2012年以降に契約した生命保険では、一般・介護医療・個人年金の3区分で生命保険料控除が受けられる。',
+        answer: true,
+        explain: '新制度（2012年〜）は3区分。各区分で所得税は最大4万円（合計最大12万円）です。',
+        tags: ['field:risk','unit:risk-3'] },
+    ], { unitId: 'risk-3' });
+  </script>
+</body>
+</html>

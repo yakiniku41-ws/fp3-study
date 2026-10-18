@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>1. 保険の基礎と契約者保護｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="risk-1" data-title="1. 保険の基礎" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">保険の基礎と契約者保護</h1>
+    <div class="lesson-lead">
+      保険は「みんなで少しずつお金を出し合い、困った人にまとめて渡す」仕組み。
+      その土台となる<b>2つの原則</b>と、契約後に「やっぱりやめたい」ときの<b>クーリングオフ</b>、
+      保険会社がつぶれたときの<b>セーフティネット</b>を押さえます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>保険は「大きな傘をみんなで用意する」仕組み</h3>
+      <p class="layer__lead">
+        たくさんの人が少しずつ保険料を出す（＝集める雨水）と、実際に事故にあった人へまとめて給付できます。
+        たくさん集めれば集めるほど「何％が事故にあうか」が正確に読めます（<b>大数の法則</b>）。
+        そして<b>集めた保険料と支払う保険金がつり合う</b>ように設計されます（<b>収支相等の原則</b>）。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 150" role="img" aria-label="多数の契約者が保険料を出し合い、事故にあった人へ保険金が支払われる仕組みの図">
+          <g font-size="9" fill="var(--text)" text-anchor="middle">
+            <circle cx="40" cy="40" r="12" fill="var(--blue)"/><circle cx="75" cy="40" r="12" fill="var(--blue)"/>
+            <circle cx="110" cy="40" r="12" fill="var(--blue)"/><circle cx="145" cy="40" r="12" fill="var(--blue)"/>
+            <text x="92" y="70">多くの契約者が保険料を出す</text>
+            <rect x="185" y="28" width="70" height="28" rx="6" fill="var(--surface-2)"/>
+            <text x="220" y="46">保険会社</text>
+            <path d="M160 40 H185" stroke="var(--muted)" fill="none" marker-end="url(#ar)"/>
+            <path d="M255 42 H295" stroke="var(--green)" fill="none" marker-end="url(#ar)"/>
+            <circle cx="310" cy="42" r="13" fill="var(--green)"/><text x="310" y="70" fill="var(--green)">事故にあった人</text>
+            <text x="275" y="34" font-size="8" fill="var(--green)">保険金</text>
+          </g>
+          <defs><marker id="ar" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="var(--muted)"/></marker></defs>
+        </svg>
+        <div class="figure__cap">大数の法則で事故率を予測し、収支相等の原則で保険料を決める。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>保険料を決める3つの予定率</h3>
+      <ul>
+        <li><b>予定死亡率</b>：どれくらいの人が亡くなるかの見込み。</li>
+        <li><b>予定利率</b>：保険会社が保険料を運用して得られる見込みの利回り。高いほど保険料は安くなる。</li>
+        <li><b>予定事業費率</b>：保険会社の経費の見込み。</li>
+      </ul>
+      <p class="muted small">保険料は「純保険料（予定死亡率・予定利率で計算）＋付加保険料（予定事業費率で計算）」で構成されます。</p>
+
+      <h3>契約者を守るルール</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>制度</th><th>ポイント</th></tr></thead>
+          <tbody>
+            <tr><td><b>クーリングオフ</b></td><td>申込日か書面交付日の<b>いずれか遅い日から8日以内</b>なら書面等で撤回できる。ただし営業所での契約や医師の診査が済んだ場合などは対象外。</td></tr>
+            <tr><td>告知義務</td><td>健康状態などを事実どおり告げる義務。違反すると契約解除される場合がある。</td></tr>
+            <tr><td>保険法・保険業法</td><td>保険法＝契約ルール、保険業法＝保険会社の監督ルール。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>保険会社が破綻したら？（保険契約者保護機構）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th></th><th>生命保険契約者保護機構</th><th>損害保険契約者保護機構</th></tr></thead>
+          <tbody>
+            <tr><td>補償の目安</td><td>破綻時点の<b>責任準備金等の90%</b>まで補償</td><td>保険の種類により補償割合が異なる（自賠責・地震保険は<b>100%</b>など）</td></tr>
+            <tr><td>加入</td><td colspan="2">国内で営業する生保・損保は<b>原則加入が義務</b>（少額短期保険業者・共済は対象外）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「大数の法則で読み、収支相等でつり合わせる」</b><br>
+      <b>「クーリングオフは"遅いほうの日から8日以内"」</b><br>
+      <b>「生保の保護機構は責任準備金の9割」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「クーリングオフは契約日から一律8日」 → ✕（申込日か<b>書面交付日の遅い日</b>から8日以内）<br>
+      ・「予定利率を高く見込むと保険料は高くなる」 → ✕（運用で稼げる前提なので<b>安く</b>なる）<br>
+      ・「共済や少額短期保険も保護機構の対象」 → ✕（<b>対象外</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'risk-1-q1', type: 'ox',
+        q: '保険料の計算に用いる「予定利率」を高く見込むほど、保険料は高くなる。',
+        answer: false,
+        explain: '予定利率が高いほど運用で稼げる前提となり、保険料は安くなります。',
+        tags: ['field:risk','unit:risk-1'] },
+      { id: 'risk-1-q2', type: 'choice',
+        q: '生命保険のクーリングオフについて正しいものはどれか。',
+        choices: [
+          '契約日から一律10日以内であれば撤回できる',
+          '申込日または書面交付日のいずれか遅い日から8日以内に撤回できる',
+          '一度契約すると撤回はできない' ],
+        answer: 1,
+        explain: '原則、申込日と書面交付日のいずれか遅い日から8日以内なら書面等で撤回できます。',
+        tags: ['field:risk','unit:risk-1'] },
+      { id: 'risk-1-q3', type: 'ox',
+        q: '国内で事業を行う生命保険会社が破綻した場合、生命保険契約者保護機構により、破綻時点の責任準備金等の全額（100%）が補償される。',
+        answer: false,
+        explain: '生命保険は原則として責任準備金等の90%までの補償です（100%ではありません）。',
+        tags: ['field:risk','unit:risk-1'] },
+      { id: 'risk-1-q4', type: 'choice',
+        q: '「多数の契約を集めるほど事故の発生確率が予測しやすくなる」という考え方を何というか。',
+        choices: ['収支相等の原則', '大数の法則', '利得禁止の原則'],
+        answer: 1,
+        explain: '大数の法則です。収支相等の原則は「集める保険料と支払う保険金がつり合う」設計原則。',
+        tags: ['field:risk','unit:risk-1'] },
+    ], { unitId: 'risk-1' });
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>4. 株式投資と投資指標（PER/PBR/ROE）｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="finance-4" data-title="4. 株式と投資指標" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">株式投資と投資指標（PER・PBR・ROE）</h1>
+    <div class="lesson-lead">
+      株式の単元の得点源は<b>投資指標の計算</b>。PER・PBR・ROE・配当利回りは、
+      式さえ覚えれば確実に取れます。電卓ツールで「数字を変えると指標がどう動くか」を体感しましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>指標は「株価を"何"と比べるか」で覚える</h3>
+      <p class="layer__lead">
+        <b>PER</b>は株価を「利益」と比べ、<b>PBR</b>は株価を「純資産」と比べる。
+        <b>ROE</b>は「元手（自己資本）でどれだけ稼いだか」。比べる相手を意識すれば混乱しません。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 120" role="img" aria-label="PERは株価と利益、PBRは株価と純資産、ROEは自己資本と利益を比べる指標であることを示す図">
+          <g font-size="9" text-anchor="middle" fill="var(--text)">
+            <rect x="10" y="30" width="100" height="60" rx="8" fill="color-mix(in srgb, var(--blue) 12%, transparent)"/>
+            <text x="60" y="52" font-weight="700" font-size="11" fill="var(--blue)">PER</text><text x="60" y="72">株価 ÷ 利益</text>
+            <rect x="120" y="30" width="100" height="60" rx="8" fill="color-mix(in srgb, var(--green) 12%, transparent)"/>
+            <text x="170" y="52" font-weight="700" font-size="11" fill="var(--green)">PBR</text><text x="170" y="72">株価 ÷ 純資産</text>
+            <rect x="230" y="30" width="100" height="60" rx="8" fill="color-mix(in srgb, var(--accent-2) 16%, transparent)"/>
+            <text x="280" y="52" font-weight="700" font-size="11" fill="var(--accent-2)">ROE</text><text x="280" y="72">利益 ÷ 自己資本</text>
+          </g>
+        </svg>
+        <div class="figure__cap">「株価÷○○」がPER・PBR、「稼ぐ力」がROE。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>株式の売買ルール</h3>
+      <ul>
+        <li>証券取引所での売買。<b>成行注文が指値注文に優先</b>（価格優先・時間優先の原則）。</li>
+        <li>受渡し（決済）は約定日を含めて<b>3営業日目</b>。</li>
+        <li>代表的な株価指数：<b>日経平均株価</b>（225銘柄・株価平均型）、<b>東証株価指数（TOPIX）</b>（時価総額加重型）。</li>
+      </ul>
+
+      <h3>投資指標の公式（最重要）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>指標</th><th>式</th><th>見方</th></tr></thead>
+          <tbody>
+            <tr><td>PER（株価収益率）</td><td>株価 ÷ 1株当たり純利益(EPS)</td><td>低いほど割安の目安</td></tr>
+            <tr><td>PBR（株価純資産倍率）</td><td>株価 ÷ 1株当たり純資産(BPS)</td><td>1倍が解散価値の目安</td></tr>
+            <tr><td>ROE（自己資本利益率）</td><td>当期純利益 ÷ 自己資本 ×100</td><td>高いほど稼ぐ力が強い</td></tr>
+            <tr><td>配当利回り</td><td>1株当たり配当 ÷ 株価 ×100</td><td>株価に対する配当の割合</td></tr>
+            <tr><td>配当性向</td><td>配当金総額 ÷ 当期純利益 ×100</td><td>利益のうち配当に回す割合</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>触って確かめる：株式指標 電卓</h3>
+      <div id="siTool"></div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「PER＝株価÷利益（低いと割安）／PBR＝株価÷純資産（1倍が目安）」</b><br>
+      <b>「ROEは"元手で稼ぐ力"／配当利回りは"株価に対する配当"」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「PERは高いほど割安」 → ✕（<b>低い</b>ほど割安の目安）<br>
+      ・「配当利回り＝配当 ÷ 利益」 → ✕（配当利回りは配当<b>÷株価</b>。÷利益は<b>配当性向</b>）<br>
+      ・「指値注文が成行注文に優先する」 → ✕（<b>成行が優先</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.stockIndicators(document.getElementById('siTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'finance-4-q1', type: 'choice',
+        q: '株価2,000円、1株当たり純利益（EPS）100円のとき、PER（株価収益率）はいくらか。',
+        choices: ['0.05倍', '20倍', '200倍'],
+        answer: 1,
+        explain: 'PER＝株価2,000 ÷ EPS100 ＝ 20倍。',
+        tags: ['field:finance','unit:finance-4'] },
+      { id: 'finance-4-q2', type: 'choice',
+        q: '株価2,000円、1株当たり配当40円のとき、配当利回りはいくらか。',
+        choices: ['2%', '5%', '40%'],
+        answer: 0,
+        explain: '配当利回り＝1株配当40 ÷ 株価2,000 ×100 ＝ 2%。',
+        tags: ['field:finance','unit:finance-4'] },
+      { id: 'finance-4-q3', type: 'ox',
+        q: 'PER（株価収益率）は、一般に数値が低いほど株価が割安であると判断される。',
+        answer: true,
+        explain: 'PERは低いほど、利益に対して株価が割安であることの目安になります。',
+        tags: ['field:finance','unit:finance-4'] },
+      { id: 'finance-4-q4', type: 'choice',
+        q: 'ROE（自己資本利益率）を求める式として正しいものはどれか。',
+        choices: [
+          '当期純利益 ÷ 自己資本 ×100',
+          '株価 ÷ 1株当たり純資産',
+          '配当金 ÷ 当期純利益 ×100' ],
+        answer: 0,
+        explain: 'ROE＝当期純利益÷自己資本×100。2番目はPBR、3番目は配当性向の式です。',
+        tags: ['field:finance','unit:finance-4'] },
+    ], { unitId: 'finance-4' });
+  </script>
+</body>
+</html>

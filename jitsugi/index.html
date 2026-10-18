@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>実技（資産設計提案業務）｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav="jitsugi" data-title="実技対策" data-back="index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>📄 実技：資産設計提案業務</h1>
+      <p>多肢選択式20問・60分・100点満点中60点以上で合格。<b>資料の読み取り</b>に慣れることが最大の得点源です。
+      各設問には「🔍 資料のどこを見る？」ボタンがあり、答えの根拠となる箇所をハイライト表示できます。</p>
+    </section>
+
+    <div id="jgSummary"></div>
+
+    <div id="jgRoot"></div>
+
+    <p class="muted small center" style="margin:22px 0 8px">
+      問題は資料ごとにグループ化されています。上から順に、または気になる資料から解いてみましょう。
+    </p>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../js/data/curriculum.js"></script>
+  <script src="../js/data/jitsugi-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/jitsugi.js"></script>
+  <script>
+    FP3.Jitsugi.mount(document.getElementById('jgRoot'), document.getElementById('jgSummary'));
+  </script>
+</body>
+</html>

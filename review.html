@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>復習デッキ｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-nav="review" data-title="復習デッキ" data-back="index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>🔁 復習デッキ</h1>
+      <p>間違えた問題は自動でここに登録され、<b>1日後→3日後→7日後…</b>と間隔をあけて再出題されます（間隔反復）。</p>
+    </section>
+
+    <div id="reviewSummary"></div>
+    <div id="reviewList"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="js/data/curriculum.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script>
+    (function () {
+      var Store = window.FP3.Store;
+      var util = window.FP3.util;
+      var summary = document.getElementById('reviewSummary');
+      var listHost = document.getElementById('reviewList');
+
+      var deck = Store.getReview();
+      var ids = Object.keys(deck);
+      var today = util.todayStr();
+      var due = ids.filter(function (id) { return util.daysBetween(deck[id].due, today) >= 0; });
+
+      summary.innerHTML =
+        '<div class="card">' +
+          '<div class="row-between"><h3>今日の復習</h3><b class="pct">' + due.length + '問</b></div>' +
+          '<p class="muted small">登録中：合計 ' + ids.length + '問</p>' +
+        '</div>';
+
+      if (ids.length === 0) {
+        listHost.innerHTML =
+          '<div class="card center">' +
+            '<p style="font-size:2rem;margin:6px 0">🌟</p>' +
+            '<p><b>復習デッキは空です。</b></p>' +
+            '<p class="muted small">単元のミニチェックや模試で間違えると、ここに自動で登録されます。</p>' +
+            '<a class="btn btn--primary" href="chapters/index.html" style="margin-top:8px">学習を始める</a>' +
+          '</div>';
+        return;
+      }
+
+      /* 復習対象の問題文を一覧表示（本文はミニチェック等で保存された meta を使用） */
+      var itemsHtml = ids.sort(function (a, b) {
+        return util.daysBetween(deck[b].due, today) - util.daysBetween(deck[a].due, today);
+      }).map(function (id) {
+        var card = deck[id];
+        var isDue = util.daysBetween(card.due, today) >= 0;
+        var qtext = (card.meta && card.meta.q) ? card.meta.q : id;
+        return '<div class="card" style="border-left:4px solid ' + (isDue ? 'var(--accent-2)' : 'var(--border)') + '">' +
+          '<div class="row-between">' +
+            '<span class="badge ' + (isDue ? 'badge--warn' : 'badge--info') + '">' +
+              (isDue ? '今日復習' : '次回 ' + card.due) + '</span>' +
+            '<span class="muted small">ステップ ' + (card.step + 1) + '/' + Store.reviewIntervals.length + '</span>' +
+          '</div>' +
+          '<p style="margin:8px 0 0;font-size:.9rem">' + qtext + '</p>' +
+        '</div>';
+      }).join('');
+
+      listHost.innerHTML =
+        '<h2 class="section-title">登録中の問題</h2>' + itemsHtml +
+        '<p class="muted small center" style="margin-top:14px">' +
+          '出題形式での復習演習は、模試モード実装（フェーズ後半）と連動します。</p>';
+    })();
+  </script>
+</body>
+</html>

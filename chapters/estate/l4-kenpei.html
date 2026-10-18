@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>4. 都市計画法・建築基準法（建蔽率・容積率）｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="estate-4" data-title="4. 建蔽率・容積率" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">都市計画法・建築基準法（建蔽率・容積率）</h1>
+    <div class="lesson-lead">
+      「この土地にどれくらいの大きさの建物が建てられる？」を決めるのが<b>建蔽率</b>と<b>容積率</b>。
+      計算問題として毎回出ます。ビジュアライザーで「割合を変えると建物がどう変わるか」を体感しましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>建蔽率＝「1階の広さ」、容積率＝「全階の合計」</h3>
+      <p class="layer__lead">
+        <b>建蔽率</b>は敷地に対する<b>建築面積（真上から見た1階の広さ）</b>の割合。
+        <b>容積率</b>は敷地に対する<b>延べ床面積（全フロアの合計）</b>の割合。
+        建蔽率が「土地をどれだけ覆えるか」、容積率が「何階建てにできるか」の目安です。
+      </p>
+      <div id="cfTool"></div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>2つの計算式</h3>
+      <div class="callout callout--point">
+        <div class="callout__title">建築面積と延べ床面積</div>
+        建築面積の上限 ＝ 敷地面積 × <b>建蔽率</b><br>
+        延べ床面積の上限 ＝ 敷地面積 × <b>容積率</b>
+      </div>
+      <p class="muted small">例）敷地200㎡・建蔽率60%・容積率200% → 建築面積120㎡・延べ床面積400㎡。</p>
+
+      <h3>用途地域と制限</h3>
+      <ul>
+        <li>都市計画区域は<b>市街化区域</b>（すでに市街地・10年以内に市街化）と<b>市街化調整区域</b>（市街化を抑制）に分けられる。</li>
+        <li>用途地域は13種類。住居系・商業系・工業系に分かれ、建てられる建物が決まる。</li>
+        <li><b>接道義務</b>：建物の敷地は原則、幅員4m以上の道路に<b>2m以上</b>接していなければならない。</li>
+        <li><b>セットバック</b>：幅員4m未満の道路（2項道路）では、道路中心線から2m下がった線が境界とみなされ、その部分は敷地面積に算入できない。</li>
+      </ul>
+
+      <h3>建蔽率・容積率の緩和と合算</h3>
+      <ul>
+        <li>建蔽率は、防火地域内の耐火建築物や、特定行政庁指定の角地で<b>緩和（＋10%など）</b>されることがある。</li>
+        <li>敷地が<b>2つの用途地域にまたがる</b>ときは、それぞれの面積で加重平均して求める。</li>
+      </ul>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「建蔽率×敷地＝建築面積（1階）、容積率×敷地＝延べ床（全部）」</b><br>
+      <b>「接道義務は 幅4m以上の道路に 2m以上」</b><br>
+      <b>「角地・防火の耐火建築物は建蔽率が緩和される」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「容積率は敷地面積に対する建築面積の割合」 → ✕（容積率は<b>延べ床面積</b>の割合。建築面積は建蔽率）<br>
+      ・「セットバック部分も敷地面積に算入できる」 → ✕（<b>算入できない</b>）<br>
+      ・「接道義務は道路に1m以上接すればよい」 → ✕（<b>2m以上</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.coverageFloor(document.getElementById('cfTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'estate-4-q1', type: 'choice',
+        q: '敷地面積300㎡、建蔽率60%のとき、建築面積の上限はいくらか。',
+        choices: ['150㎡', '180㎡', '500㎡'],
+        answer: 1,
+        explain: '建築面積の上限＝敷地面積300㎡ ×60% ＝ 180㎡。',
+        tags: ['field:estate','unit:estate-4'] },
+      { id: 'estate-4-q2', type: 'choice',
+        q: '敷地面積300㎡、容積率200%のとき、延べ床面積の上限はいくらか。',
+        choices: ['150㎡', '600㎡', '900㎡'],
+        answer: 1,
+        explain: '延べ床面積の上限＝敷地面積300㎡ ×200% ＝ 600㎡。',
+        tags: ['field:estate','unit:estate-4'] },
+      { id: 'estate-4-q3', type: 'ox',
+        q: '建築物の敷地は、原則として幅員4m以上の道路に2m以上接していなければならない（接道義務）。',
+        answer: true,
+        explain: '接道義務です。幅員4m以上の道路に2m以上接する必要があります。',
+        tags: ['field:estate','unit:estate-4'] },
+      { id: 'estate-4-q4', type: 'ox',
+        q: '容積率とは、敷地面積に対する建築面積（真上から見た面積）の割合をいう。',
+        answer: false,
+        explain: '容積率は敷地面積に対する「延べ床面積」の割合です。建築面積の割合は建蔽率。',
+        tags: ['field:estate','unit:estate-4'] },
+    ], { unitId: 'estate-4' });
+  </script>
+</body>
+</html>

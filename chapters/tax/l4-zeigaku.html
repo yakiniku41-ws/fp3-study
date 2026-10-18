@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>4. 税額計算と税額控除｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="tax-4" data-title="4. 税額計算と税額控除" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">税額計算と税額控除</h1>
+    <div class="lesson-lead">
+      課税所得が決まったら、いよいよ<b>税額の計算</b>。ここでは<b>超過累進税率の考え方</b>と、
+      税額を直接減らす<b>税額控除（住宅ローン控除・配当控除）</b>を押さえます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>累進税率は「階段」——上の段だけ高い税率</h3>
+      <p class="layer__lead">
+        「所得が増えると全部に高い税率がかかる」わけではありません。
+        <b>超えた部分だけ</b>に高い税率がかかる<b>階段方式（超過累進）</b>。だから速算表で「控除額」を引いて調整します。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 120" role="img" aria-label="課税所得が上がるほど超えた部分にだけ高い税率がかかる階段状の超過累進税率の図">
+          <g>
+            <rect x="30" y="90" width="60" height="18" fill="var(--green)"/><text x="60" y="103" font-size="8" fill="#fff" text-anchor="middle">5%</text>
+            <rect x="95" y="72" width="60" height="36" fill="var(--blue)"/><text x="125" y="94" font-size="8" fill="#fff" text-anchor="middle">10%</text>
+            <rect x="160" y="48" width="60" height="60" fill="var(--accent-2)"/><text x="190" y="82" font-size="8" fill="#fff" text-anchor="middle">20%</text>
+            <rect x="225" y="24" width="60" height="84" fill="var(--ng)"/><text x="255" y="70" font-size="8" fill="#fff" text-anchor="middle">23%〜</text>
+          </g>
+          <text x="170" y="16" text-anchor="middle" font-size="9" fill="var(--text)">課税所得が増えるほど、超えた部分の税率が上がる →</text>
+        </svg>
+        <div class="figure__cap">税率5%〜45%の7段階。速算表で「税率×課税所得−控除額」と計算する。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>所得税の速算表（抜粋）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>課税所得金額</th><th>税率</th><th>控除額</th></tr></thead>
+          <tbody>
+            <tr><td>195万円以下</td><td>5%</td><td>0円</td></tr>
+            <tr><td>330万円以下</td><td>10%</td><td>97,500円</td></tr>
+            <tr><td>695万円以下</td><td>20%</td><td>427,500円</td></tr>
+            <tr><td>900万円以下</td><td>23%</td><td>636,000円</td></tr>
+            <tr><td>1,800万円以下</td><td>33%</td><td>1,536,000円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted small">例）課税所得500万円 → 500万×20% − 42.75万 ＝ 57.25万円。別途、復興特別所得税（基準所得税額×2.1%）が加算される。</p>
+
+      <h3>主な税額控除（税額を直接減らす）</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>控除</th><th>ポイント</th></tr></thead>
+          <tbody>
+            <tr><td><b>住宅借入金等特別控除</b>（住宅ローン控除）</td><td>年末残高 × 一定率を税額から控除。<b>初年度は確定申告</b>が必要（給与所得者は2年目以降 年末調整で可）。合計所得金額などの要件あり。<span class="badge badge--warn">改正注意</span></td></tr>
+            <tr><td><b>配当控除</b></td><td>配当所得を<b>総合課税</b>で申告した場合に受けられる。申告分離課税やNISAでは受けられない。</td></tr>
+            <tr><td>外国税額控除</td><td>国外で課された税と国内の二重課税を調整。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「超過累進＝超えた部分だけ高い税率、速算表で"控除額"を引いて調整」</b><br>
+      <b>「住宅ローン控除は初年度だけ確定申告、2年目からは年末調整」</b><br>
+      <b>「配当控除は"総合課税で申告"したときだけ」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「住宅ローン控除は毎年 確定申告が必要」 → ✕（給与所得者は<b>2年目以降は年末調整</b>で可）<br>
+      ・「配当を申告分離課税で申告しても配当控除が受けられる」 → ✕（<b>総合課税</b>のときのみ）<br>
+      ・「所得が増えると全所得にその高い税率がかかる」 → ✕（<b>超えた部分だけ</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'tax-4-q1', type: 'ox',
+        q: '所得税は超過累進課税であり、課税所得金額のうち一定額を超えた部分にのみ、より高い税率が適用される。',
+        answer: true,
+        explain: '超過累進なので、増えた（超えた）部分だけに高い税率がかかります。',
+        tags: ['field:tax','unit:tax-4'] },
+      { id: 'tax-4-q2', type: 'ox',
+        q: '給与所得者が住宅ローン控除を受ける場合、適用の初年度は確定申告が必要である。',
+        answer: true,
+        explain: '初年度は確定申告が必要。2年目以降は年末調整で受けられます。',
+        tags: ['field:tax','unit:tax-4'] },
+      { id: 'tax-4-q3', type: 'choice',
+        q: '配当控除を受けるための条件として正しいものはどれか。',
+        choices: [
+          '配当所得を申告分離課税で申告する',
+          '配当所得を総合課税で申告する',
+          'NISA口座で配当を受け取る' ],
+        answer: 1,
+        explain: '配当控除は配当所得を総合課税で申告した場合に受けられます。申告分離やNISAでは不可。',
+        tags: ['field:tax','unit:tax-4'] },
+      { id: 'tax-4-q4', type: 'choice',
+        q: '「住宅借入金等特別控除」と「配当控除」に共通する性質はどれか。',
+        choices: [
+          'いずれも課税所得金額から差し引く所得控除である',
+          'いずれも算出税額から直接差し引く税額控除である',
+          'いずれも収入から差し引く必要経費である' ],
+        answer: 1,
+        explain: 'どちらも税額控除で、算出した所得税額から直接差し引きます。',
+        tags: ['field:tax','unit:tax-4'] },
+    ], { unitId: 'tax-4' });
+  </script>
+</body>
+</html>

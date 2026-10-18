@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>3. 相続税の計算｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="inherit-3" data-title="3. 相続税の計算" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">相続税の計算</h1>
+    <div class="lesson-lead">
+      相続税でいちばん問われるのが<b>基礎控除</b>と<b>生命保険金の非課税枠</b>。
+      どちらも「<b>法定相続人の数</b>」がカギです。計算の順番も一緒に押さえましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>基礎控除は「3,000万円＋人数ボーナス600万円」</h3>
+      <p class="layer__lead">
+        相続財産が<b>基礎控除以下</b>なら相続税はかかりません。
+        基礎控除は<b>3,000万円 ＋ 600万円 ×法定相続人の数</b>。人数が多いほど非課税ラインが上がります。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 110" role="img" aria-label="基礎控除は3000万円に法定相続人1人あたり600万円を加えた金額であることを示す図">
+          <g font-size="10" text-anchor="middle" fill="#fff">
+            <rect x="30" y="40" width="120" height="34" rx="6" fill="var(--blue)"/><text x="90" y="62">3,000万円</text>
+            <text x="163" y="62" fill="var(--text)" font-size="14">＋</text>
+            <rect x="180" y="40" width="130" height="34" rx="6" fill="var(--green)"/><text x="245" y="58" font-size="9">600万円 ×</text><text x="245" y="70" font-size="9">法定相続人の数</text>
+          </g>
+          <text x="170" y="24" text-anchor="middle" font-size="10" fill="var(--text)" font-weight="700">遺産に係る基礎控除額</text>
+        </svg>
+        <div class="figure__cap">例）法定相続人3人なら 3,000万＋600万×3＝4,800万円。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>基礎控除と生命保険金・死亡退職金の非課税</h3>
+      <div class="callout callout--point">
+        <div class="callout__title">3つの「×法定相続人の数」</div>
+        遺産に係る基礎控除 ＝ <b>3,000万円 ＋ 600万円 ×法定相続人の数</b><br>
+        生命保険金の非課税限度額 ＝ <b>500万円 ×法定相続人の数</b><br>
+        死亡退職金の非課税限度額 ＝ <b>500万円 ×法定相続人の数</b>
+      </div>
+      <p class="muted small">「法定相続人の数」は、相続放棄があってもその放棄がなかったものとして数える。養子は実子がいれば1人、いなければ2人まで算入。</p>
+
+      <h3>相続税の計算の流れ</h3>
+      <div class="steps">
+        <div class="step"><span class="step__no">1</span><span class="step__txt">各人の課税価格を合計（生命保険金等の非課税を差し引く）</span></div>
+        <div class="step"><span class="step__no">2</span><span class="step__txt"><b>基礎控除</b>を引いて課税遺産総額を求める</span></div>
+        <div class="step"><span class="step__no">3</span><span class="step__txt">いったん<b>法定相続分どおりに分けた</b>と仮定して各人の税額を出し、合計＝相続税の総額</span></div>
+        <div class="step"><span class="step__no">4</span><span class="step__txt">実際の取得割合で按分し、各種の税額控除を適用</span></div>
+      </div>
+
+      <h3>主な税額控除</h3>
+      <ul>
+        <li><b>配偶者の税額軽減</b>：配偶者が取得した遺産のうち、<b>法定相続分</b>または<b>1億6,000万円</b>のいずれか多い金額まで相続税がかからない。</li>
+        <li>未成年者控除・障害者控除など。</li>
+      </ul>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「基礎控除＝3,000万＋600万×人数」</b><br>
+      <b>「保険金・退職金の非課税＝500万×人数」</b><br>
+      <b>「配偶者は 1億6,000万 か 法定相続分 まで非課税」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「基礎控除は 5,000万円＋1,000万円×法定相続人の数」 → ✕（改正後は<b>3,000万＋600万×人数</b>）<br>
+      ・「相続放棄した人は法定相続人の数に含めない」 → ✕（基礎控除等の計算では<b>放棄がなかったもの</b>として数える）<br>
+      ・「配偶者の税額軽減は必ず1億6,000万円まで」 → ✕（法定相続分と1億6,000万円の<b>多いほう</b>まで）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'inherit-3-q1', type: 'choice',
+        q: '法定相続人が3人である場合、遺産に係る基礎控除額はいくらか。',
+        choices: ['4,200万円', '4,800万円', '8,000万円'],
+        answer: 1,
+        explain: '3,000万円＋600万円×3人＝4,800万円です。',
+        tags: ['field:inherit','unit:inherit-3'] },
+      { id: 'inherit-3-q2', type: 'choice',
+        q: '相続人が受け取った死亡保険金（生命保険金）の非課税限度額の計算式はどれか。',
+        choices: [
+          '300万円 ×法定相続人の数',
+          '500万円 ×法定相続人の数',
+          '600万円 ×法定相続人の数' ],
+        answer: 1,
+        explain: '生命保険金・死亡退職金の非課税限度額は「500万円×法定相続人の数」です。',
+        tags: ['field:inherit','unit:inherit-3'] },
+      { id: 'inherit-3-q3', type: 'ox',
+        q: '基礎控除額を計算する際の「法定相続人の数」は、相続放棄をした人がいても、その放棄がなかったものとして数える。',
+        answer: true,
+        explain: '基礎控除・非課税限度額の計算では、相続放棄はなかったものとして人数に含めます。',
+        tags: ['field:inherit','unit:inherit-3'] },
+      { id: 'inherit-3-q4', type: 'ox',
+        q: '配偶者の税額軽減により、配偶者が取得した財産は、法定相続分相当額と1億6,000万円のいずれか多い金額まで相続税がかからない。',
+        answer: true,
+        explain: '配偶者の税額軽減は「法定相続分」または「1億6,000万円」のいずれか多い金額までです。',
+        tags: ['field:inherit','unit:inherit-3'] },
+    ], { unitId: 'inherit-3' });
+  </script>
+</body>
+</html>

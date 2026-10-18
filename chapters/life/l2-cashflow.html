@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>2. ライフプランニングの手法とキャッシュフロー表｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="life-2" data-title="2. キャッシュフロー表" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">ライフプランニングの手法とキャッシュフロー表</h1>
+    <div class="lesson-lead">
+      「このままの家計で、子どもの大学入学のとき貯金は足りる？」——その答えを出す道具が
+      <b>キャッシュフロー表</b>です。実技試験でも毎回のように出る最重要ツール。ここは"手を動かして"覚えます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>家計の「未来予想図」を3枚の地図で描く</h3>
+      <p class="layer__lead">
+        ①<b>ライフイベント表</b>＝いつ何にお金がかかるかの「予定表」。
+        ②<b>キャッシュフロー表</b>＝毎年のお金の出入りと貯金残高の「天気予報」。
+        ③<b>個人バランスシート</b>＝今の資産と借金の「スナップ写真」。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 150" role="img" aria-label="時間軸上に結婚・出産・住宅購入・教育・退職のライフイベントが並ぶタイムライン">
+          <line x1="20" y1="80" x2="320" y2="80" stroke="var(--blue)" stroke-width="2"/>
+          <g font-size="9" fill="var(--text)" text-anchor="middle">
+            <g><circle cx="55" cy="80" r="6" fill="var(--green)"/><text x="55" y="60">結婚</text><text x="55" y="100" fill="var(--muted)">28歳</text></g>
+            <g><circle cx="115" cy="80" r="6" fill="var(--green)"/><text x="115" y="60">出産</text><text x="115" y="100" fill="var(--muted)">31歳</text></g>
+            <g><circle cx="180" cy="80" r="6" fill="var(--accent-2)"/><text x="180" y="60">住宅購入</text><text x="180" y="100" fill="var(--muted)">36歳</text></g>
+            <g><circle cx="245" cy="80" r="6" fill="var(--accent-2)"/><text x="245" y="60">大学入学</text><text x="245" y="100" fill="var(--muted)">49歳</text></g>
+            <g><circle cx="305" cy="80" r="6" fill="var(--blue)"/><text x="305" y="60">退職</text><text x="305" y="100" fill="var(--muted)">65歳</text></g>
+          </g>
+        </svg>
+        <div class="figure__cap">ライフイベント表：将来の大きな出費を時系列で見える化する。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>キャッシュフロー表の3つの必須計算</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>求めるもの</th><th>公式</th></tr></thead>
+          <tbody>
+            <tr><td>将来の収入・支出（n年後）</td><td>現在の額 ×（1＋変動率）<sup>n</sup></td></tr>
+            <tr><td>年間収支</td><td>収入合計 − 支出合計</td></tr>
+            <tr><td>年末の貯蓄残高</td><td>前年末残高 ×（1＋運用利率）＋ その年の年間収支</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>「可処分所得」に注意（超頻出）</h3>
+      <p>キャッシュフロー表の収入欄は<b>可処分所得</b>（手取り）で書きます。</p>
+      <div class="callout callout--point">
+        <div class="callout__title">可処分所得の公式</div>
+        可処分所得 ＝ 年収 −（<b>所得税＋住民税＋社会保険料</b>）<br>
+        <span class="small">※ 生命保険料・住宅ローン返済・積立額などは<b>差し引きません</b>。引くのは「税金」と「社会保険料」だけ。</span>
+      </div>
+
+      <h3>個人バランスシート</h3>
+      <p>ある時点の資産と負債を<b>時価</b>で並べた表。</p>
+      <div class="callout callout--point">
+        <div class="callout__title">純資産の公式</div>
+        純資産 ＝ 資産（時価）− 負債　　→ プラスなら家計は健全、マイナスは債務超過。
+      </div>
+
+      <h3>やってみよう：キャッシュフロー表ビルダー</h3>
+      <div id="cfTool"></div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      将来値は「<b>変動率をn乗</b>」。貯蓄残高は「<b>前年に利息をつけてから、今年の収支を足す</b>」。<br>
+      可処分所得は「<b>税金と社会保険料だけ</b>を引く（保険・ローンは引かない）」。
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・可処分所得の計算で生命保険料や住宅ローンを差し引く → ✕<br>
+      ・貯蓄残高を「今年の収支を足してから利息をつける」 → ✕（先に前年残高へ利息、あとで収支）<br>
+      ・個人BSの資産を「購入時の価格（簿価）」で記入 → ✕（<b>時価</b>で記入）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/tools.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Tools.cashflowBuilder(document.getElementById('cfTool'));
+
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'life-2-q1', type: 'ox',
+        q: 'キャッシュフロー表において、基準年から2年後の給与収入は「現在の額 ×（1＋変動率）²」で求める。',
+        answer: true,
+        explain: '将来値は変動率を年数分だけ累乗します。2年後なら2乗です。',
+        tags: ['field:life','unit:life-2'] },
+      { id: 'life-2-q2', type: 'ox',
+        q: '可処分所得は、年収から所得税・住民税・社会保険料に加えて、生命保険料も差し引いて求める。',
+        answer: false,
+        explain: '差し引くのは「所得税・住民税・社会保険料」だけ。生命保険料やローンは含めません。',
+        tags: ['field:life','unit:life-2'] },
+      { id: 'life-2-q3', type: 'choice',
+        q: 'キャッシュフロー表の「年末の貯蓄残高」の求め方として正しいものはどれか。',
+        choices: [
+          '前年末残高 ＋ その年の年間収支（利息は考えない）',
+          '前年末残高 ×（1＋運用利率）＋ その年の年間収支',
+          '（前年末残高 ＋ 年間収支）×（1＋運用利率）' ],
+        answer: 1,
+        explain: '前年末残高にまず利息を付け、その後にその年の年間収支を足します。',
+        tags: ['field:life','unit:life-2'] },
+      { id: 'life-2-q4', type: 'choice',
+        q: '個人バランスシートで「純資産」を求める式はどれか。',
+        choices: ['資産（時価）＋ 負債', '資産（時価）− 負債', '収入 − 支出'],
+        answer: 1,
+        explain: '純資産＝資産−負債。資産は時価で評価します。',
+        tags: ['field:life','unit:life-2'] },
+    ], { unitId: 'life-2' });
+  </script>
+</body>
+</html>

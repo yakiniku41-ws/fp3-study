@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>2. 10種類の所得｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="tax-2" data-title="2. 10種類の所得" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">10種類の所得</h1>
+    <div class="lesson-lead">
+      所得税では、もうけを<b>10種類</b>に分類します。それぞれ「どう計算するか」「特別な控除があるか」が違います。
+      全部暗記は大変なので、<b>頻出の給与・退職・一時・不動産</b>を軸に押さえましょう。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>もうけの「出どころ」で10個の引き出しに仕分ける</h3>
+      <p class="layer__lead">
+        働いて得た（給与・事業）、資産から得た（利子・配当・不動産）、一時的に得た（退職・一時・譲渡）など、
+        お金の出どころで引き出しが決まります。とくに<b>退職所得と一時所得</b>は計算が特徴的で頻出です。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 120" role="img" aria-label="10種類の所得を働いて得る・資産から得る・一時的に得るの3グループに分けた図">
+          <g font-size="8" fill="var(--text)" text-anchor="middle">
+            <rect x="8" y="24" width="104" height="80" rx="8" fill="color-mix(in srgb, var(--blue) 10%, transparent)"/>
+            <text x="60" y="40" font-weight="700" font-size="9" fill="var(--blue)">働いて得る</text>
+            <text x="60" y="58">給与所得</text><text x="60" y="72">事業所得</text><text x="60" y="86">退職所得</text>
+            <rect x="118" y="24" width="104" height="80" rx="8" fill="color-mix(in srgb, var(--green) 10%, transparent)"/>
+            <text x="170" y="40" font-weight="700" font-size="9" fill="var(--green)">資産から得る</text>
+            <text x="170" y="56">利子・配当</text><text x="170" y="70">不動産所得</text><text x="170" y="84">譲渡所得</text>
+            <rect x="228" y="24" width="104" height="80" rx="8" fill="color-mix(in srgb, var(--accent-2) 14%, transparent)"/>
+            <text x="280" y="40" font-weight="700" font-size="9" fill="var(--accent-2)">その他</text>
+            <text x="280" y="56">一時所得</text><text x="280" y="70">雑所得</text><text x="280" y="84">山林所得</text>
+          </g>
+        </svg>
+        <div class="figure__cap">10種類：利子・配当・不動産・事業・給与・退職・山林・譲渡・一時・雑。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>頻出の所得と計算</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>所得</th><th>計算</th></tr></thead>
+          <tbody>
+            <tr><td>給与所得</td><td>給与収入 − <b>給与所得控除</b></td></tr>
+            <tr><td>退職所得</td><td>（退職金 − <b>退職所得控除</b>）× <b>1/2</b>（原則）</td></tr>
+            <tr><td>不動産所得</td><td>総収入 − 必要経費（家賃収入など。事業的規模でも不動産所得）</td></tr>
+            <tr><td>事業所得</td><td>総収入 − 必要経費</td></tr>
+            <tr><td>一時所得</td><td>総収入 − 支出 − <b>特別控除50万円</b>（さらに総所得に入れるのは<b>1/2</b>）</td></tr>
+            <tr><td>利子所得</td><td>原則20.315%の源泉分離課税</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>退職所得控除（頻出）</h3>
+      <div class="callout callout--point">
+        <div class="callout__title">退職所得控除額</div>
+        勤続20年以下：<b>40万円 × 勤続年数</b>（最低80万円）<br>
+        勤続20年超：<b>800万円 ＋ 70万円 ×（勤続年数 − 20年）</b><br>
+        <span class="small">勤続年数の1年未満は切り上げ。退職所得は原則（控除後）×1/2で分離課税。</span>
+      </div>
+
+      <h3>一時所得（生命保険の満期金など）</h3>
+      <div class="callout callout--point">
+        <div class="callout__title">一時所得の流れ</div>
+        一時所得 ＝ 総収入 − 収入を得るための支出 − 特別控除<b>50万円</b>。<br>
+        総所得金額に算入するのは、この一時所得の<b>2分の1</b>。
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「退職所得は "引いて半分"、一時所得は "50万引いて半分"」</b><br>
+      <b>「退職所得控除：20年までは 40万×年、20年超は 800万＋70万×超過年」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「退職所得控除は勤続20年超で1年あたり40万円」 → ✕（20年超の部分は<b>70万円</b>）<br>
+      ・「一時所得はそのまま全額を総所得に算入」 → ✕（50万円控除後の<b>2分の1</b>）<br>
+      ・「アパートの家賃収入は事業所得」 → ✕（<b>不動産所得</b>）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'tax-2-q1', type: 'choice',
+        q: 'アパートを賃貸して得た家賃収入は、原則としてどの所得に区分されるか。',
+        choices: ['事業所得', '不動産所得', '雑所得'],
+        answer: 1,
+        explain: '不動産の貸付けによる所得は、事業的規模であっても不動産所得に区分されます。',
+        tags: ['field:tax','unit:tax-2'] },
+      { id: 'tax-2-q2', type: 'choice',
+        q: '勤続25年で退職した人の退職所得控除額として正しいものはどれか。',
+        choices: [
+          '40万円 × 25年 ＝ 1,000万円',
+          '800万円 ＋ 70万円 ×（25年 − 20年）＝ 1,150万円',
+          '70万円 × 25年 ＝ 1,750万円' ],
+        answer: 1,
+        explain: '20年超は「800万円＋70万円×(勤続年数−20年)」。25年なら800＋70×5＝1,150万円です。',
+        tags: ['field:tax','unit:tax-2'] },
+      { id: 'tax-2-q3', type: 'ox',
+        q: '一時所得は、その金額を全額そのまま総所得金額に算入する。',
+        answer: false,
+        explain: '一時所得は特別控除50万円を引いた後、さらにその2分の1を総所得金額に算入します。',
+        tags: ['field:tax','unit:tax-2'] },
+      { id: 'tax-2-q4', type: 'ox',
+        q: '退職所得は、原則として（退職金−退職所得控除額）×2分の1で計算される。',
+        answer: true,
+        explain: '退職所得は原則として（収入金額−退職所得控除額）×1/2で求めます。',
+        tags: ['field:tax','unit:tax-2'] },
+    ], { unitId: 'tax-2' });
+  </script>
+</body>
+</html>

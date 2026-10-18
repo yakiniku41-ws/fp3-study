@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>1. 不動産の基礎と登記｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body data-nav="learn" data-unit="estate-1" data-title="1. 不動産の基礎と登記" data-back="chapters/index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+    <div id="lessonTop"></div>
+
+    <h1 class="lesson-title">不動産の基礎と登記</h1>
+    <div class="lesson-lead">
+      不動産の「身分証明書」が<b>登記事項証明書</b>。誰の土地か・借金の担保になっていないか、が読み取れます。
+      また土地には<b>4つの公的価格</b>があり、実技の資料問題でも問われます。
+    </div>
+
+    <!-- 直感層 -->
+    <section class="layer layer--intuition">
+      <span class="layer__tag">💡 直感でつかむ</span>
+      <h3>登記簿は「表題部＋権利部（甲区・乙区）」の3階建て</h3>
+      <p class="layer__lead">
+        <b>表題部</b>＝どんな不動産か（所在・面積など）。<b>権利部 甲区</b>＝<b>所有権</b>（誰のもの）。
+        <b>権利部 乙区</b>＝<b>所有権以外</b>（抵当権など借金の担保）。この3層で読みます。
+      </p>
+      <div class="figure">
+        <svg viewBox="0 0 340 130" role="img" aria-label="登記事項証明書が表題部・権利部甲区・権利部乙区で構成される図">
+          <g font-size="9" fill="#fff">
+            <rect x="30" y="15" width="280" height="30" rx="5" fill="var(--green)"/><text x="45" y="34">表題部：所在・地番・地目・面積など</text>
+            <rect x="30" y="50" width="280" height="30" rx="5" fill="var(--blue)"/><text x="45" y="69">権利部 甲区：所有権（所有者・差押えなど）</text>
+            <rect x="30" y="85" width="280" height="30" rx="5" fill="var(--accent-2)"/><text x="45" y="104">権利部 乙区：所有権以外（抵当権など）</text>
+          </g>
+        </svg>
+        <div class="figure__cap">お金を借りて担保に入れると「乙区」に抵当権が記録される。</div>
+      </div>
+    </section>
+
+    <!-- 理解層 -->
+    <section class="layer layer--understand">
+      <span class="layer__tag">📘 正確に理解する</span>
+
+      <h3>登記のポイント</h3>
+      <ul>
+        <li>登記事項証明書は<b>誰でも</b>手数料を払えば取得できる。</li>
+        <li>登記には<b>対抗力</b>（第三者に権利を主張できる）はあるが、<b>公信力はない</b>（登記を信じて取引しても保護されるとは限らない）。</li>
+        <li>仮登記は、順位を確保するための予備的な登記。</li>
+      </ul>
+
+      <h3>土地の4つの価格</h3>
+      <div class="table-scroll">
+        <table class="cmp">
+          <thead><tr><th>価格</th><th>公表元・基準日</th><th>水準（公示価格＝100）</th></tr></thead>
+          <tbody>
+            <tr><td>公示価格</td><td>国土交通省・1月1日</td><td>100</td></tr>
+            <tr><td>基準地標準価格</td><td>都道府県・7月1日</td><td>公示価格に準じる</td></tr>
+            <tr><td>相続税路線価</td><td>国税庁・1月1日</td><td><b>約80%</b></td></tr>
+            <tr><td>固定資産税評価額</td><td>市町村・1月1日（3年ごとに評価替え）</td><td><b>約70%</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="callout callout--memo">
+      <div class="callout__title">記憶フック</div>
+      <b>「甲区は"所有"、乙区は"それ以外（抵当権）"」</b><br>
+      <b>「路線価は 公示の8割、固定資産税評価は 7割」</b><br>
+      <b>「登記に公信力なし・対抗力あり」</b>
+    </div>
+
+    <div class="callout callout--trap">
+      <div class="callout__title">引っかけ注意</div>
+      ・「抵当権は権利部の甲区に記録される」 → ✕（<b>乙区</b>。甲区は所有権）<br>
+      ・「登記には公信力がある」 → ✕（対抗力はあるが<b>公信力はない</b>）<br>
+      ・「相続税路線価は公示価格の約70%」 → ✕（路線価は<b>約80%</b>、固定資産税評価が約70%）
+    </div>
+
+    <!-- 得点層 -->
+    <section class="layer layer--score">
+      <span class="layer__tag">🎯 得点する（ミニチェック）</span>
+      <div id="mini"></div>
+    </section>
+
+    <div id="lessonFooter"></div>
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../../js/data/curriculum.js"></script>
+  <script src="../../js/app.js"></script>
+  <script src="../../js/quiz.js"></script>
+  <script src="../../js/lesson.js"></script>
+  <script>
+    FP3.Quiz.mountMiniCheck(document.getElementById('mini'), [
+      { id: 'estate-1-q1', type: 'choice',
+        q: '不動産の抵当権に関する事項が記録されるのは、登記記録のどの部分か。',
+        choices: ['表題部', '権利部（甲区）', '権利部（乙区）'],
+        answer: 2,
+        explain: '所有権以外の権利（抵当権など）は権利部の乙区に記録されます。甲区は所有権。',
+        tags: ['field:estate','unit:estate-1'] },
+      { id: 'estate-1-q2', type: 'ox',
+        q: '不動産登記には公信力がないため、登記記録を信頼して取引しても、必ずしも保護されるとは限らない。',
+        answer: true,
+        explain: '登記には対抗力はありますが公信力はありません。',
+        tags: ['field:estate','unit:estate-1'] },
+      { id: 'estate-1-q3', type: 'choice',
+        q: '相続税路線価は、一般に公示価格のおおよそどの程度の水準か。',
+        choices: ['約70%', '約80%', '約90%'],
+        answer: 1,
+        explain: '相続税路線価は公示価格の約80%、固定資産税評価額は約70%が目安です。',
+        tags: ['field:estate','unit:estate-1'] },
+      { id: 'estate-1-q4', type: 'ox',
+        q: '登記事項証明書は、その不動産の所有者本人でなければ取得できない。',
+        answer: false,
+        explain: '登記事項証明書は、手数料を納付すれば誰でも取得できます。',
+        tags: ['field:estate','unit:estate-1'] },
+    ], { unitId: 'estate-1' });
+  </script>
+</body>
+</html>

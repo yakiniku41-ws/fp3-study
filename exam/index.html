@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <title>模試モード｜FP3級 合格ナビ</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-nav="exam" data-title="模試モード" data-back="index.html">
+
+  <div id="appHeader"></div>
+
+  <main class="wrap">
+
+    <div id="examStart">
+      <section class="hero">
+        <h1>📝 模試モード</h1>
+        <p>本番同様、CBTの操作感（1問ずつ表示・見直しフラグ・全問一覧ジャンプ）で挑戦できます。開始すると即タイマーが動きます。</p>
+      </section>
+
+      <div class="card">
+        <h3>学科模試</h3>
+        <p class="muted small">○×・三答択一 全60問（6分野から各10問を出題）／90分／36点以上（60点満点）で合格</p>
+        <button class="btn btn--primary" id="startGakka">学科模試を始める</button>
+      </div>
+
+      <div class="card">
+        <h3>実技模試（資産設計提案業務）</h3>
+        <p class="muted small">資料読み取り型 20問／60分／60点以上（100点満点）で合格</p>
+        <button class="btn btn--primary" id="startJitsugi">実技模試を始める</button>
+      </div>
+
+      <div class="card">
+        <h3>模試の使い方</h3>
+        <ul class="muted small" style="margin:0;padding-left:1.2em">
+          <li>1問ずつ表示され、選んだ答えはすぐには採点されません（結果はすべて解答後に表示）</li>
+          <li>🏳️ボタンで「あとで見直す」フラグを付けられます</li>
+          <li>下の全問一覧から、好きな問題番号にジャンプできます</li>
+          <li>時間切れになると自動的に提出されます</li>
+          <li>採点後、分野別（実技は資料別）の正答率をレーダーチャートで確認できます</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="examRoot" style="display:none"></div>
+
+  </main>
+
+  <nav id="appNav"></nav>
+
+  <script src="../js/data/curriculum.js"></script>
+  <script src="../js/data/exam-bank.js"></script>
+  <script src="../js/data/jitsugi-data.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/exam.js"></script>
+  <script>
+    (function () {
+      var startHost = document.getElementById('examStart');
+      var runHost = document.getElementById('examRoot');
+
+      function launch(kind) {
+        startHost.style.display = 'none';
+        runHost.style.display = '';
+        FP3.Exam.start(kind, runHost);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      document.getElementById('startGakka').addEventListener('click', function () { launch('gakka'); });
+      document.getElementById('startJitsugi').addEventListener('click', function () { launch('jitsugi'); });
+    })();
+  </script>
+</body>
+</html>
